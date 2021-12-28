@@ -1,0 +1,14 @@
+**/.vscode/**
+**/.idea/**
+**/venv/**
+**/*.zip
+**/*.pdf
+**/*.docx
+**/*.xlsx
+**/*.accdb
+**/*.html
+**/*.jpg
+**/*.png
+**/*.gif
+**/*.exe
+

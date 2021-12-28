@@ -1,0 +1,169 @@
+Kosar {
+	sorszam : egész			// kosár (vásárló) sorszáma
+	osszDb	: egész			// kosárban lévő termékek összszáma
+	osszAr	: egész			// kosárban lévő termékek összes értéke
+	termekek[] : termek		// kosárban lévő termék-típusok
+	
+	// visszaadja, hogy van-e megadott nevű termék a kosárban
+	függvény vanBenne(nev:szoveg): logikai
+		_vanBenne = Hamis
+		ciklus minden termek a termekek-ben
+			ha termek.nev == nev akkor
+				_vanbenne = Igaz
+				// kiugrás a ciklusból
+			elág vége
+		ciklus vége
+		vanBenne = _vanBenne	// visszatérési érték
+	függvény vége
+	
+	// visszaadja a megadott nevű terméket
+	függvény getTermek(nev:szoveg): Termek
+		_getTermek = Üres
+		ciklus minden termek a termekek-ben
+			ha termek.nev == nev akkor
+				_getTermek = termek
+				// kiugrás a ciklusból
+			elág vége
+		ciklus vége
+		getTermek = _getTermek	// visszatérési érték
+	függvény vége
+	
+}
+
+Termek {
+		nev: szöveg		// termék neve
+		db:	 szám		// termék darabszáma
+}
+
+kosarak=[] : kosar
+
+fileBe = file("penztar.txt")
+sorszam = 1
+kosar = Kosar()		// üres kosárral indítunk
+ciklus minden sor a fileBe-ból
+	ha sor == "F" akkor
+		// kosár fizetés
+		osszAr = 0
+		// összeszámoljuk az egyes terméktípusok után fizetendő összeget
+		ciklus minden termek a kosar.termekek-ből
+			osszAr += ertek(termek.db)
+		ciklus vége
+		kosar.osszAr = osszAr		// letároljuk a kosárba a teljes fizetendő összeget
+		kosar.sorszam = sorszam		// letároljuk a kosárba a vásárló sorszámát
+		sorszam += 1
+		kosarak.add(kosar)
+		// új kosarat nyitunk
+		kosar = Kosar()
+	különben
+		// kosarat feltölt
+		// a vanBenne osztályfüggvény helyett alkalmazható:		
+		// megkeressük, hogy van-e már ilyen nevű termék a kosárban
+		termekIdx = -1			// -1 jelöli, hogy még nincs ilyen nevű termék a kosárban
+		i = 0
+		ciklus amíg termekIdx <= hossz(kosar.termekek) 
+			ha kosar.termekek[i] == sor akkor
+				termekIdx = i
+				// és ki is ugorhatunk a ciklusból
+			elág vége
+			i += 1
+		ciklus vége
+		ha termekIdx = -1 akkor
+			termek = Termek()
+			termek.nev = sor
+			termek.db = 1
+			kosar.termekek.add(termek)
+			termekIdx = hossz(kosar.termekek)
+		különben
+			kosar.termekek[termekIdx].db +=1	// növeljük a kosárbeli termék darabszámát		
+		elág vége
+		kosar.osszDb += 1					// növeljük a kosárbeli termékek számát
+	elágazás vége
+ciklus vége
+fileBe.close()
+
+# 2. feladat
+Ki: hossz(kosarak)
+
+# 3. feladat
+Ki: kosarak[0].osszDb
+
+# 4. feladat
+Be: sorszam
+Be: nev
+Be: darab
+
+# 5. feladat
+// Felhasználjuk a a Kosar osztály vanBenne függvényét, ami visszaadja, hogy van-e adott nevű termék a kosárban vagy sem
+// másik lehetőség, hogy függvény helyett a Kosar-ban egy stringben (vagy sima listában) letároljuk az összes terméknevet és string (lista) tartalmazás vizsgálattal döntjük el, hogy szerepel-e
+
+# 'A' verzió: külön keressük meg az elsőt, utolsót és számoljuk meg
+elso = Kosar()
+i = 0
+ciklus amíg kosarak[i].vanBenne(nev) == Hamis
+	i += 1
+ciklus
+elso = kosarak[i]
+ki: elso
+
+utolso = Kosar()
+i = hossz(kosarak)
+ciklus amíg kosarak[i].vanBenne(nev) == Hamis
+	i -= 1
+ciklus
+utolso = kosarak[i]
+ki: utolso
+
+osszDb = 0
+ciklus minden kosar a kosarak-ból
+	ha kosar.termek[nev] == nev akkor
+		osszDb +=1
+	elág vége
+ciklus
+ki:osszDb
+
+
+# 'B' verzió: egy ciklusban keressük meg az elsőt, utolsót és számoljuk meg
+elso = null
+masodik = null
+osszDb = 0
+ciklus minden kosar a kosarak-ból
+	ha elso == null akkor
+		ha kosar.vanBenne(nev) akkor
+			elso = kosar
+		elág vége
+	elag vége
+	ha kosar.vanBenne(nev) akkor
+		utolso = kosar
+		osszDb +=1
+	elág vége
+ciklus
+ki: elso, utolso, osszDb
+
+
+# 6. feladat
+függvény ertek(db:egész):egész
+	osszAr = 0
+	ha db == 1 akkor
+		osszAr += 500
+	különbenHa db = 2 akkor		
+		osszAr += 500 + 450
+	különben
+		osszAr += 500 + 450 + 400*(db-2)
+	elág vége
+	ertek = osszAr
+függvény vége
+
+# 7. feladat
+// indexre figyelni, eggyel kisebb, mint a bekért sorszám
+ciklus minden termek a kosarak[sorszam].termekek-ből
+	ki: termek.db, termek.nev
+ciklus vege
+
+# 8. feladat
+fileKi = file("osszeg.txt")
+ciklus minden kosar a kosarak-ból
+	ki: kosar.sorszam, ": ", kosar.osszAr
+ciklus vége
+	
+
+

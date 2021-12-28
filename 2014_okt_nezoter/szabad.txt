@@ -1,0 +1,15 @@
+xx2x2x1x1x1x11xxxx2x
+xxxxxxxxxxxxxxxx222x
+x2x2x1x1x1x1x1x2x2x2
+22x2x1x1x1x1x1x22x2x
+xxxxxxxxxxxxxxxx2333
+xxxxxxxxxxxxxxxxxxxx
+33333222211222223333
+xxxxxxxxxx22xxxxxxxx
+x44xxxxxxxxx3xxxxx44
+xxxxxx3xxxxxxx3xx444
+x54444433x3333444xxx
+555555x4x4x4x4x5x5x5
+5xxxxxxxxxxxxxxxxx55
+xxxxxxxxxxxx4455555x
+5xxxxxxxxxxxxx555555
