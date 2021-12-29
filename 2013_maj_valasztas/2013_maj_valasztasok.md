@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2013 május - Választások
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2013majvalasztasstarter})
+2. [Megoldás](https://replit.com/@mscharni/2013majvalasztas)
+
 ## Feladat
 Eszemiszom városában időközi helyhatósági választásokat írtak ki. A városban összesen 12 345 szavazásra jogosult állampolgár van, akiket nyolc választókerületbe soroltak.
 
