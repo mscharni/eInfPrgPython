@@ -53,18 +53,18 @@ print("Adatok beolvasva feldolgozva és kiratva.")
 
 # 2. feladat
 print("2. feladat")
-sorSz = int(input("Sor száma [1..{}] :".format(maxSor)))
-helySz = int(input("Hely száma [1..{}] :".format(maxHely)))
+sorSz = int(input(f"Sor száma [1..{maxSor}] :"))
+helySz = int(input(f"Hely száma [1..{maxHely}] :"))
 allapot = ""
 if nezoter[sorSz-1][helySz-1] == "x":
     allapot = "foglalt"
 else:
     allapot = "szabad"
-print("A(z) {}. sor {}. helye {}.".format(sorSz, helySz, allapot))
+print(f"A(z) {sorSz}. sor {helySz}. helye {allapot}.")
 
 # 3. feladat
 print("3. feladat")
-print("Az előadásra eddig {} jegyet adtak el, ez a nézőtér {}%-a.".format(szabadok,round(100*szabadok/(maxSor*maxHely))))       
+print(f"Az előadásra eddig {szabadok} jegyet adtak el, ez a nézőtér {szabadok/(maxSor*maxHely):.2%}%-a.")
 
 # 4. feladat
 print("4. feladat")
@@ -72,14 +72,14 @@ maxI = 0
 for i in range(0,6):
     if kategoriaSzum[maxI] < kategoriaSzum[i]:
         maxI = i
-print("A legtöbb jegyet a(z) {}. árkategóriában értékesítették.".format(maxI))
+print(f"A legtöbb jegyet a(z) {maxI}. árkategóriában értékesítették.")
 
 # 5. feladat
 print("5. feladat")
 osszesBevetel = 0
 for i in range(0,6):
     osszesBevetel += kategoriaErtek[i]
-print("A teljes bevétel: {} Ft.".format(osszesBevetel))
+print(f"A teljes bevétel: {osszesBevetel} Ft.")
 
 # 6. feladat
 print("6. feladat")
@@ -95,6 +95,6 @@ for sor in range(0,maxSor):
     # jobb szél
     if nezoter[sor][maxHely-2] == "x" and nezoter[sor][maxHely-1] == "o":
         egyedulHely += 1
-print("{} egyedülálló hely van.".format(egyedulHely))
+print(f"{egyedulHely} egyedülálló hely van.")
 
 
