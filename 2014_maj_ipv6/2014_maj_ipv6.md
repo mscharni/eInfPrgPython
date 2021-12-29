@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2014 május - IPv6
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2014majipv6starter)
+2. [Megoldás](https://replit.com/@mscharni/2014majipv6)
+
 ## Feladat
 A számítógépes hálózatok üzemeltetésében az IPv4-es címeket lassan leváltja az IPv6-os címzési rendszer, amely az eddigi 32 bit hosszúságú címek helyett 128 bit hosszúságú címeket használ.
 
