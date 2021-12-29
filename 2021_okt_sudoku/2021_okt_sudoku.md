@@ -1,5 +1,10 @@
 # Emelt Informatika Érettségi - 2021 május - Gödrök
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2021oktsudokustarter)
+2. [Kezdő szintű megoldás](https://replit.com/@mscharni/2021oktsudokubeginner)
+3. [Haladó szintű megoldás](https://replit.com/@mscharni/2021oktsudokuadvanced)
+
 ## Feladat
 A sudoku egy logikai játék, melyben megadott szabályok szerint számjegyeket kell elhelyezni egy táblázatban. Ebben a feladatban **9×9**-es táblázatot használunk.
 
