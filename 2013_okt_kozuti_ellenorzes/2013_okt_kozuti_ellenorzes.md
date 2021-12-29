@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2013 október - Közúti ellenőrzés
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2013oktkozutiellenorzesstarter)
+2. [Megoldás](https://replit.com/@mscharni/2013oktkozutiellenorzes)
+
 ## Feladat
 Bizonyára mindenki látott már rendőrjárőrt, aki szolgálata során egy út menti ellenőrző pontról a forgalmat figyelte. A járőr feladata lehet a szabálytalankodók kiszűrése mellett az elhaladó járművek szúrópróbaszerű vagy módszeres ellenőrzése. Bizonyos esetekben egy műszaki ellenőrző állomás is kitelepül, amely alkalmas a kiválasztott járművek műszaki állapotának felmérésére.
 
