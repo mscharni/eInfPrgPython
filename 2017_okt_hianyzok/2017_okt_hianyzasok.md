@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2017 október - Hiányzások
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2017okthianyzasokstarter)
+2. [Megoldás](https://replit.com/@mscharni/2017okthianyzasok)
+
 ## Feladat
 Egy osztály második félévi hiányzásai állnak rendelkezésére a **_naplo.txt_** fájlban. A hiányzások naponként csoportosítva szerepelnek, minden napot a **#** karakter kezd, majd egy-egy szóközzel elválasztva a hónap és a nap sorszáma következik. Az aznapi hiányzások tanulónként külön sorokban vannak, a tanuló napi hiányzásait egy hét karakterből álló karaktersorozat írja le. A karaktersorozat minden karaktere egy-egy órát ad meg. Értéke az **O** betű, ha a tanuló jelen volt az adott órán, az **X** utal az igazolt, az **I** az igazolatlan távollétre, végül **N** betű jelzi, ha a tanulónak akkor nem volt órája. Például:
 ```
