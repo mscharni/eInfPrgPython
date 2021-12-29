@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2021 május - Gödrök
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2021majgodrokstarter)
+2. [Megoldás](https://replit.com/@mscharni/2021majgodrok)
+
 ## Feladat
 Egy teljesen sík terepen a talaj olyan anyagból van, ami nem ereszti át a vizet. Ezen a területen egy egyenes mentén munkagépekkel 10 méter széles csatornát építenek. A munka még nem készült el, ezért a csatorna mélysége nem állandó, helyenként a felszín is érintetlen. A már elkészült résszel, mint különálló gödrök sorozatával foglalkozik a feladat. Az egyszerűbb kezelés érdekében a gödröket úgy tekintjük, hogy oldalfaluk függőleges, teljes szélességben azonos mélységű, így a keresztmetszeti kép jól leírja a terepviszonyokat.
 
