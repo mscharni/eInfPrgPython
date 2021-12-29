@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2015 május - Expedíció
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2015majexpediciostarter)
+2. [Megoldás](https://replit.com/@mscharni/2015majexpedicio)
+
 ## Feladat
 Valamikor a távközlés hőskorában egy ritka farkasfaj tudományos megfigyelésére expedíciót szerveztek a sarkkörön túlra. A magukkal vitt rádió csak napi egy adásra volt alkalmas, arra is csak 90 időegységig, időegységenként egy karaktert továbbítva. Az expedíció rádiósának üzeneteit több rádióamatőr is igyekezett lejegyezni. A feladatban a rádióamatőrök által lejegyzett üzeneteket kell feldolgoznia.
 
