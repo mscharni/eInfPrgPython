@@ -1,8 +1,4 @@
-# Emelt Informatika Érettségi - {title} - {year} {month}
-
-## Oktatási Hivatal 
-> [Feladat megtekintése👁]({fl_url}) 
-> [Forrás letöltése💾]({zip_url})
+# Emelt Informatika Érettségi - {year} {month} - {title}
 
 ## Online forráskódok
 1. [Megoldás váz](https://replit.com/@mscharni/{replit_starter_url})

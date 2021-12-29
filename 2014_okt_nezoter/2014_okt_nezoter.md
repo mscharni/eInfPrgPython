@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2014 október - Nézőtér
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2014oktnezoterstarter)
+2. [Megoldás](https://replit.com/@mscharni/2014oktnezoter)
+
 ## Feladat
 A Fregoli Színházban a jegyeladásokat elektronikusan rögzítik. A színházban 15 sor, és soronként 20 szék van. A sorokat 1-től 15-ig számozzák, a sorokon belül pedig a székeket 1-től 20-ig. Egy előadásra a pillanatnyilag eladott jegyek eloszlását a **_foglaltsag.txt_** szöveges állomány tartalmazza, melyben „**x**” jelzi a foglalt és „**o**” a szabad helyeket.
 
