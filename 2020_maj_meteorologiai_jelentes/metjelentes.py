@@ -1,7 +1,7 @@
 # adatok
 orak = ["01", "07", "13", "19"] # azon órák felsorolva, amelyket számolni kell
 
-class oTavirat:
+class Tavirat:
     def __init__(self, hely, ido, szel, ho):
         self.hely = hely
         self.ido = ido
@@ -17,7 +17,7 @@ class oTavirat:
         return hash
 taviratok = []
 
-class oTelep:
+class Telep:
     def __init__(self, hely, ido, szel, ho):
         self.hely = hely
         self.ido = ido
@@ -48,38 +48,42 @@ class oTelep:
 
 telepek = []
 
-# 1. feladat
+# 1. feladat: Olvassa be és tárolja el a tavirathu13.txt állomány adatait!
 print("\n1. feladat")
-fileBe = open("tavirathu13.txt", "r")
-for sor in fileBe:
-    adatok = sor.split(" ")
-    _hely = adatok[0].strip()
-    _ido = adatok[1].strip()
-    _szel = adatok[2].strip()
-    _ho = int(adatok[3].strip())
-    # táviratok feldolgozása
-    tavirat = oTavirat(_hely, _ido, _szel, _ho)
-    taviratok.append(tavirat)
-    # telepek feldolgozása
-    # megkeressük, hogy van-e már ilyen nevű telep
-    ujTelep = True
-    for telep in telepek:
-        if telep.hely == _hely:
-            telep.update(_ido, _szel, _ho)
-            ujTelep = False
-    if ujTelep:
-        telep = oTelep(_hely, _ido, _szel, _ho)
-        telepek.append(telep)
+with open("tavirathu13.txt", "r") as fileBe:
+    for sor in fileBe:
+        adatok = sor.split(" ")
+        _hely = adatok[0].strip()
+        _ido = adatok[1].strip()
+        _szel = adatok[2].strip()
+        _ho = int(adatok[3].strip())
+        # táviratok feldolgozása
+        tavirat = Tavirat(_hely, _ido, _szel, _ho)
+        taviratok.append(tavirat)
+        # telepek feldolgozása
+        # megkeressük, hogy van-e már ilyen nevű telep
+        ujTelep = True
+        for telep in telepek:
+            if telep.hely == _hely:
+                telep.update(_ido, _szel, _ho)
+                ujTelep = False
+        if ujTelep:
+            telep = Telep(_hely, _ido, _szel, _ho)
+            telepek.append(telep)
+print("Adatok beolvasva a 'tavirathu13.txt' állományból")
 
-# 2. feladat
+# 2. feladat: Kérje be a felhasználótól egy város kódját! Adja meg, hogy az adott városból mikor érkezett
+# az utolsó mérési adat! A kiírásban az időpontot óó:pp formátumban jelenítse meg!
 print("\n2. feladat")
 varosBe = input("Adja meg egy település kódját! Település: ").strip()
 i = len(taviratok)-1
 while taviratok[i].hely != varosBe:
     i -= 1
-print("Az utolsó mérési adat a megadott településről {0}-kor érkezett.".format(taviratok[i].getIdo()))
+print(f"Az utolsó mérési adat a megadott településről {taviratok[i].getIdo()}-kor érkezett.")
 
-# 3. feladat
+# 3. feladat: Határozza meg, hogy a nap során mikor mérték a legalacsonyabb és a legmagasabb hőmérsékletet!
+#   Jelenítse meg a méréshez kapcsolódó település nevét, az időpontot és a hőmérsékletet!
+#   Amennyiben több legnagyobb vagy legkisebb érték van, akkor elég az egyiket kiírnia.
 print("\n3. feladat")
 minHo = taviratok[0]
 maxHo = taviratok[0]
@@ -89,35 +93,48 @@ for tavir in taviratok:
         minHo = tavir
     if maxHo.ho < tavir.ho:
         maxHo = tavir
-print("A legalacsonyabb hőmérséklet: {0} {1} {2} fok.".format(minHo.hely, minHo.getIdo(), minHo.ho))
-print("A legmagasabb hőmérséklet: {0} {1} {2} fok.".format(maxHo.hely, maxHo.getIdo(), maxHo.ho))
+print(f"A legalacsonyabb hőmérséklet: {minHo.hely} {minHo.getIdo()} {minHo.ho} fok.")
+print(f"A legmagasabb hőmérséklet: {maxHo.hely} {maxHo.getIdo()} {maxHo.ho} fok.")
 
-# 4. feladat
+# 4. feladat: Határozza meg, azokat a településeket és időpontokat, ahol és amikor a mérések idején szélcsend volt!
+#   (A szélcsendet a táviratban 00000 kóddal jelölik.) Ha nem volt ilyen, akkor a „Nem volt szélcsend a mérések idején.” szöveget írja ki!
+#   A kiírásnál a település kódját és az időpontot jelenítse meg.
 print("\n4. feladat")
 nincs = True
 for tavir in taviratok:
     if tavir.szel == "00000":
-        print("{0} {1}".format(tavir.hely, tavir.getIdo()))
+        print(f"{tavir.hely} {tavir.getIdo()}")
         nincs = False
 if nincs:
     print("Nem volt szélcsend a mérések idején.")        
 
-# 5. feladat
+# 5. feladat: Határozza meg a települések napi középhőmérsékleti adatát és a hőmérséklet-ingadozását!
+#   A kiírásnál a település kódja szerepeljen a sor elején a minta szerint!
+#   A kiírásnál csak a megoldott feladatrészre vonatkozó szöveget és értékeket írja ki!
+#   a. A középhőmérséklet azon hőmérsékleti adatok átlaga, amikor a méréshez tartozó óra értéke 1., 7., 13., 19.
+#       Ha egy településen a felsorolt órák valamelyikén nem volt mérés, akkor a kiírásnál az „NA” szót jelenítse meg!
+#       Az adott órákhoz tartozó összes adat átlagaként határozza meg a középhőmérsékletet, azaz minden értéket azonos súllyal vegyen figyelembe!
+#       A középhőmérsékletet egészre kerekítve jelenítse meg!
+#   b. A hőmérséklet-ingadozás számításhoz az adott településen a napi legmagasabb és legalacsonyabb hőmérséklet különbségét kell kiszámítania!
+#       (Feltételezheti, hogy minden település esetén volt legalább két mérési adat.)
 print("\n5. feladat")
 for telep in telepek:
-    if telep.checkOrak() :
-        print("BP Középhőmérséklet: {0}; Hőmérséklet-ingadozás: {1}".format(telep.getAtlagHo(), telep.getHoIng()))
+    if telep.checkOrak():
+        print(f"{telep.hely} Középhőmérséklet: {telep.getAtlagHo()}; Hőmérséklet-ingadozás: {telep.getHoIng()}")
     else:
-        print("{0} NA; Hőmérséklet-ingadozás: {1}".format(telep.hely, telep.getHoIng()))
+        print(f"{telep.hely} NA; Hőmérséklet-ingadozás: {telep.getHoIng()}")
 
-# 6. feladat
+# 6. feladat: Hozzon létre településenként egy szöveges állományt, amely első sorában a település kódját tartalmazza!
+#   A további sorokban a mérési időpontok és a hozzá tartozó szélerősségek jelenjenek meg!
+#   A szélerősséget a minta szerint a számértéknek megfelelő számú kettőskereszttel (#) adja meg!
+#   A fájlban az időpontokat és a szélerősséget megjelenítő kettőskereszteket szóközzel válassza el egymástól!
+#   A fájl neve X.txt legyen, ahol az X helyére a település kódja kerüljön!
 print("\n6. feladat")
 for telep in telepek:
     fileKiNev = telep.hely + ".txt"
-    fileKi = open(fileKiNev, 'w')
-    fileKi.writelines("{0}\n".format(fileKiNev))
-    for tavirat in taviratok:
-        if telep.hely == tavirat.hely:
-            fileKi.writelines("{0} {1}\n".format(tavirat.getIdo(), tavirat.getSzelEro()))
-    fileKi.close()
+    with open(fileKiNev, 'w') as fileKi:
+        fileKi.writelines(f"{fileKiNev}\n")
+        for tavirat in taviratok:
+            if telep.hely == tavirat.hely:
+                fileKi.writelines(f"{tavirat.getIdo()} {tavirat.getSzelEro()}\n")
 print("A fájlok elkészültek.")

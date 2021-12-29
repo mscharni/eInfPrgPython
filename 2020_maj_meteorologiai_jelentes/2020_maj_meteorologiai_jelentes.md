@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2020 május - Meteorológiai jelentés
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2020majmeteorologiaijelentesstarter)
+2. [Megoldás](https://replit.com/@mscharni/2020majmeteorologiaijelentes)
+
 ## Feladat
 Az ország területén néhány városból rendszeres időközönként időjárás táviratokat küldenek. A távirat egy rövid szöveges üzenet, amely a főbb időjárási információkat tartalmazza. Rendelkezésünkre áll az ország területéről egy adott nap összes távirata.
 

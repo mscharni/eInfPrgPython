@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2019 október - eUtazás
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2019okteutazasstarter)
+2. [Megoldás](https://replit.com/@mscharni/2019okteutazas)
+
 ## Feladat
 Egyre több országban fordul elő, hogy a közlekedési eszközökön használatos bérleteket és jegyeket valamilyen elektronikus eszközön (például: chipes kártya) tárolják. Egy nagyváros ilyen rendszert szeretne bevezetni a helyi közlekedésben, amelyet néhány buszjáraton tesztelnek. Ezekre a buszokra csak az első ajtónál lehet felszállni, ahol egy ellenőrző eszközhöz kell érinteni a kártyát, amelynek chipje tartalmazza a jegy vagy bérlet információkat.
 
