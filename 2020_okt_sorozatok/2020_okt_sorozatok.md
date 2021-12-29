@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2020 október - Sorozatok
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2020oktsorozatokstarter)
+2. [Megoldás](https://replit.com/@mscharni/2020oktsorozatok)
+
 ## Feladat
 Sok olyan sorozatrajongó van, aki folyamatosan követi a kedvelt sorozatait. Egy, az angol nyelvű sorozatokért rajongó személy feljegyzést készített egy nyolc hónapos időszak kedvenc sorozatairól.
 
