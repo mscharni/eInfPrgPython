@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2016 május - Ötszáz
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2016majotszazstarter)
+2. [Megoldás](https://replit.com/@mscharni/2016majotszaz)
+
 ## Feladat
 Egy apróságokat árusító boltban minden árucikk darabja 500 Ft. Ha egy vásárlás során valaki egy adott árucikkből több darabot is vesz, a második ára már csak 450 Ft, a harmadik pedig 400 Ft, de a negyedik és további darabok is ennyibe kerülnek, tehát az ár a harmadik ugyanazon cikk vásárlása után már nem csökken tovább.
 

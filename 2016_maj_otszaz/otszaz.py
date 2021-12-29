@@ -1,3 +1,4 @@
+# kosár kezelésére szolgáló osztály
 class Kosar:
 	def __init__(self):
 		self.sorszam = 0
@@ -12,12 +13,14 @@ class Kosar:
 				_vanBenne = termek
 		return _vanBenne	
 
+# termék kezelésére szolgáló osztály
 class Termek:
 	def __init__(self):
 		self.nev = ""
 		self.db = 0
 
-# 6. feladat
+# 6. feladat: Határozza meg, hogy a bekért darabszámot vásárolva egy termékből mennyi a fizetendő összeg!
+#   A feladat megoldásához készítsen függvényt ertek néven, amely a darabszámhoz a fizetendő összeget rendeli!
 def ertek(db):
 	osszAr = 0
 	if db == 1:
@@ -29,58 +32,62 @@ def ertek(db):
 	return osszAr
 
 kosarak=[]
-# 1. feladat
-print("1. feladat")
-fileBe = open("penztar.txt", "r")
+
+# 1. feladat: Olvassa be és tárolja el a penztar.txt fájl tartalmát!
+print("\n1. feladat")
 sorszam = 1
-kosar = Kosar()     # üres kosárral indítunk
-for sor in fileBe:
-    sorAdat = sor.strip()
-    if sorAdat == "F":
-        # kosár fizetés
-        ossz = 0
-        # összeszámoljuk az egyes terméktípusok után fizetendő összeget
-        for termek in kosar.termekek:
-            ossz += ertek(termek.db)
-        kosar.osszAr = ossz       # letároljuk a kosárba a teljes fizetendő összeget
-        kosar.sorszam = sorszam     # letároljuk a kosárba a vásárló sorszámát
-        sorszam += 1
-        kosarak.append(kosar)
-        # új kosarat nyitunk
-        kosar = Kosar()
-    else:
-        # kosarat feltölt
-        # vesszük a kosárbeli terméket 
-        termek = kosar.getTermek(sorAdat)
-        # ha nincs, akkor üres objektumot kapunk vissza, ekkor létrehozzuk a kosárban a terméket
-        if termek == None:
-            # ha nincs még ilyen termék a kosárban, akkor felvesszük
-            termek = Termek()
-            termek.nev = sorAdat
-            termek.db = 1
-            kosar.termekek.append(termek)
+kosar = Kosar()  # üres kosárral indítunk
+with open("penztar.txt", "r") as fileBe:
+    for sor in fileBe:
+        sorAdat = sor.strip()
+        if sorAdat == "F":
+            # kosár fizetés
+            ossz = 0
+            # összeszámoljuk az egyes terméktípusok után fizetendő összeget
+            for termek in kosar.termekek:
+                ossz += ertek(termek.db)
+            kosar.osszAr = ossz       # letároljuk a kosárba a teljes fizetendő összeget
+            kosar.sorszam = sorszam     # letároljuk a kosárba a vásárló sorszámát
+            sorszam += 1
+            kosarak.append(kosar)
+            # új kosarat nyitunk
+            kosar = Kosar()
         else:
-            # van, ekkor csak növeljük a termék számát
-            termek.db +=1                   # növeljük a kosárbeli termék darabszámát
-        kosar.osszDb += 1                   # növeljük a kosárbeli termékek számát
-fileBe.close
+            # kosarat feltölt
+            # vesszük a kosárbeli terméket
+            termek = kosar.getTermek(sorAdat)
+            # ha nincs, akkor üres objektumot kapunk vissza, ekkor létrehozzuk a kosárban a terméket
+            if termek == None:
+                # ha nincs még ilyen termék a kosárban, akkor felvesszük
+                termek = Termek()
+                termek.nev = sorAdat
+                termek.db = 1
+                kosar.termekek.append(termek)
+            else:
+                # van, ekkor csak növeljük a termék számát
+                termek.db +=1                   # növeljük a kosárbeli termék darabszámát
+            kosar.osszDb += 1                   # növeljük a kosárbeli termékek számát
+print("Az adatok beolvasva a 'penztar.txt' állományból.")
 
-# 2. feladat
-print("2. feladat")
-print("A kifizetések száma: {}".format(len(kosarak)))
+# 2. feladat: Határozza meg, hogy hányszor fizettek a pénztárnál!
+print("\n2. feladat")
+print(f"A kifizetések száma: {len(kosarak)}")
 
-# 3. feladat
-print("3. feladat")
-print("Az első vásárló {} darab árucikket vásárolt.".format(kosarak[0].osszDb))
+# 3. feladat: Írja a képernyőre, hogy az első vásárlónak hány darab árucikk volt a kosarában!
+print("\n3. feladat")
+print(f"Az első vásárló {kosarak[0].osszDb} darab árucikket vásárolt.")
 
-# 4. feladat
-print("4. feladat")
+# 4. feladat: Kérje be a felhasználótól egy vásárlás sorszámát, egy árucikk nevét és egy darabszámot!
+#   A következő három feladat megoldásánál ezeket használja fel!
+print("\n4. feladat")
 beSzam = int(input("Adja meg egy vásárlás sorszámát! "))
 beNev = input("Adja meg egy árucikk nevét! ")
 beDb = int(input("Adja meg a vásárolt darabszámot! "))
 
-# 5. feladat
-print("5. feladat")
+# 5. feladat: Határozza meg, hogy a bekért árucikkből
+#   a. melyik vásárláskor vettek először, és melyiknél utoljára!
+#   b. összesen hány alkalommal vásároltak!
+print("\n5. feladat")
 vasarElso = None
 vasarUtso = None
 vasarDb = 0
@@ -94,22 +101,26 @@ for kosar in kosarak:
     if kosar.getTermek(beNev):
         vasarUtso = kosar
         vasarDb +=1
-print("Az első vásárlás sorszáma: {}".format(vasarElso.sorszam))
-print("Az utolsó vásárlás sorszáma: {}".format(vasarUtso.sorszam))
-print("{} vásárlás során vettek belőle".format(vasarDb))
+print(f"Az első vásárlás sorszáma: {vasarElso.sorszam}")
+print(f"Az utolsó vásárlás sorszáma: {vasarUtso.sorszam}")
+print(f"{vasarDb} vásárlás során vettek belőle")
 
-# 6. feladat
-# forráskód elején
+# 6. feladat: Határozza meg, hogy a bekért darabszámot vásárolva egy termékből mennyi a fizetendő összeg!
+#   A feladat megoldásához készítsen függvényt ertek néven, amely a darabszámhoz a fizetendő összeget rendeli!
+#   A függvény a forráskód elején!
+print("\n6. feladat")
+print(f"{beDb} darab vételekor fizetendő: {ertek(beDb)}")
 
-# 7. feladat
-print("7. feladat")
+# 7. feladat: Határozza meg, hogy a bekért sorszámú vásárláskor mely árucikkekből és milyen mennyiségben vásároltak!
+#   Az árucikkek nevét tetszőleges sorrendben megjelenítheti.
+print("\n7. feladat")
 # a kosarak indexe eggyel kisebb, mind a kosarak sorszáma
 for termek in kosarak[beSzam-1].termekek:
-    print("{} {}".format(termek.db, termek.nev))
+    print(f"{termek.db} {termek.nev}")
 
-# 8. feladat
-fileKi = open("osszeg.txt", "w")
-for kosar in kosarak:
-    fileKi.writelines("{}: {}\n".format(kosar.sorszam, kosar.osszAr))
-fileKi.flush()
-fileKi.close()
+# 8. feladat: Készítse el az osszeg.txt fájlt, amelybe soronként az egy-egy vásárlás alkalmával fizetendő összeg kerüljön a kimeneti mintának megfelelően!
+print("\n8. feladat")
+with open("osszeg.txt", "w") as fileKi:
+    for kosar in kosarak:
+        fileKi.writelines("{}: {}\n".format(kosar.sorszam, kosar.osszAr))
+print("Adatok kiírva az 'osszeg.txt' állományba")

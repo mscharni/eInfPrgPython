@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2017 május - Tesztverseny
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2017majtesztversenystarter)
+2. [Megoldás](https://replit.com/@mscharni/2017majtesztverseny)
+
 ## Feladat
 Egy közismereti versenyen a versenyzőknek 13+1, azaz összesen 14 tesztfeladatot tűznek ki. A versenyzőknek minden feladat esetén négy megadott lehetőség (**A**, **B**, **C**, **D**) közül kell a helyes választ megjelölniük. A versenybizottság garantálja, hogy tesztlapon minden kérdéshez pontosan egy helyes válasz tartozik. A kitöltött tesztlapokat elektronikusan rögzítik, a visszaélések elkerülése végett a versenyzőket betűkből és számokból álló kóddal azonosítják.
 
