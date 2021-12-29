@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2018 október - Kerítés
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2018oktkeritesstarter)
+2. [Megoldás](https://replit.com/@mscharni/2018oktkerites)
+
 ## Feladat
 Egy üdülőfalu újonnan nyitott utcájában a telkeket a saroktól kiindulva egymás után folyamatosan, kihagyások nélkül adják el. A vásárló kiválaszthatja az oldalt, amelyen vásárolni akar (ott csak a soron következő telket vásárolhatja meg), valamint megadhatja a telek utcafronti szélességét. Sok telket vettek meg az utcában, a legtöbben már kerítést is építettek, azok majd’ mindegyikét be is festették.
 

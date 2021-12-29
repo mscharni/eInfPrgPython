@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2018 május - Társalgó
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2018majtarsalgostarter)
+2. [Megoldás](https://replit.com/@mscharni/2018majtarsalgo)
+
 ## Feladat
 Egy színház társalgójában még a délelőtti próbák alatt is nagy a forgalom. A színészek hosszabb-rövidebb beszélgetésekre térnek be ide, vagy éppen csak keresnek valakit. A feladatban a társalgó ajtajánál 9 és 15 óra között felvett adatokat kell feldolgoznia.
 
