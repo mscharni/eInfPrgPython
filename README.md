@@ -2,7 +2,9 @@
 ## Emelt Informatika Érettségi Programozási feladatok megoldása Python nyelven
 
 A mappában az elmúlt évek emelt infomatika érettségi gyakorlati feladat programozási részeinek a megoldása szerepel.
+
 Jellemzően az órán megbeszélt és elkészített forráskódokat tartalmazza, így minden bizonnyal lehet még rajtuk csiszolgatni :-)
+
 Minden almappa a következőket tartalmazza:
 1. Feladat kitűzést tartalmazó markdown (**`<év>_<hó>_<cim>.md`**) állomány
 2. Megoldást tartalmazó Python forrásállomány (`.py`). Több, eltérő megoldás esetében mindegyik külön állományban foglal helyet
