@@ -1,5 +1,9 @@
 # Emelt Informatika Érettségi - 2015 október - Fej vagy írás
 
+## Online forráskódok
+1. [Megoldás váz](https://replit.com/@mscharni/2015oktfejvagyirasstarter)
+2. [Megoldás](https://replit.com/@mscharni/2015oktfejvagyiras)
+
 ## Feladat
 Ha egy szabályos pénzérmét feldobunk, ugyanannyi a valószínűsége annak, hogy leesés után az érme értéke lesz felül (írás, I), mint annak, hogy a címert tartalmazó másik oldala (fej, F). Ezért gyakran „pénzfeldobással” sorsolnak, például így döntik el, hogy melyik csapat kezdhet el egy futballmeccset.
 

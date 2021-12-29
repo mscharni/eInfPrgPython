@@ -1,29 +1,34 @@
 import random
 
 dobas = ""
-# 1. feladat
+# 1. feladat: Szimuláljon egy pénzfeldobást, ahol azonos esélye van a fejnek és az írásnak is!
+#   Az eredményt írassa ki a képernyőre a mintának megfelelően!
+print("\n1. feladat:")
 veletlen = random.randint(0,1)
 if veletlen == 0:
     dobas = "I"
 else:
     dobas = "F"        
-print("A pénzfeldobás eredménye: {}".format(dobas))
+print(f"A pénzfeldobás eredménye: {dobas}")
 
-# 2. feladat
+# 2. feladat: Kérjen be a felhasználótól egy tippet, majd szimuláljon egy pénzfeldobást!
+#   Írassa ki a képernyőre a felhasználó tippjét és a dobás eredményét is, majd tájékoztassa a felhasználót az eredményről következő formában:
+#   „Ön eltalálta.” vagy „Ön nem találta el.”!
+print("\n2. feladat:")
 tipp = input("Tippeljen! (F/I) = ")
 veletlen = random.randint(0,1)
 if veletlen == 0:
     dobas = "I"
 else:
     dobas = "F"        
-print("A tipp {}, a dobás eredménye {} volt.".format(tipp, dobas))
+print(f"A tipp {tipp}, a dobás eredménye {dobas} volt.")
 if tipp == dobas:
     print("Ön eltalálta!")
 else:
     print("Ön nem találta el!")
 
-# 3. feladat
-fileBe = open("kiserlet.txt", "r")
+# 3. feladat: Állapítsa meg, hány dobásból állt a kísérlet, és a választ a mintának megfelelően írassa ki a képernyőre!
+print("\n3. feladat:")
 dobasDb = 0         # összes dobás száma
 fejDb = 0           # Összes fej száma
 aktFejDb = 0        # aktuális fej-sorozat hossza
@@ -32,58 +37,62 @@ ketFej = "IFFI"     # pontosan kétfejű
 ketFejDb = 0        # pontosan kétfejűek száma
 maxFejDb = 0        # maximális fej-sorozat hossza
 maxFejIdx = 0       # maximális fej-sorozat utáni I indexe
-# első három beolvasása
-for i in range(0,4):
-    sor = fileBe.readline().strip()
-    buffer += sor
-    dobasDb += 1
-    if sor == "F":
-        fejDb += 1
-        aktFejDb +=1 
-    if sor == "I":
-        if aktFejDb > maxFejDb:
-            maxFejDb = aktFejDb
-            maxFejIdx = dobasDb
-        aktFejDb = 0 
 
-if buffer == ketFej:
-    ketFejDb += 1
+with open("kiserlet.txt", "r") as fileBe:
+    # első négy sor (első négyes) beolvasása
+    for i in range(0,4):
+        sor = fileBe.readline().strip()
+        buffer += sor
+        dobasDb += 1
+        if sor == "F":
+            fejDb += 1
+            aktFejDb +=1
+        if sor == "I":
+            if aktFejDb > maxFejDb:
+                maxFejDb = aktFejDb
+                maxFejIdx = dobasDb
+            aktFejDb = 0
 
-for sor in fileBe:
-    sor = sor.strip()
-    buffer = buffer[1:4] + sor
-    dobasDb += 1
-    if sor == "F":
-        fejDb += 1
-        aktFejDb += 1
     if buffer == ketFej:
         ketFejDb += 1
-    if sor == "I":
-        if aktFejDb > maxFejDb:
-            maxFejDb = aktFejDb
-            maxFejIdx = dobasDb
-        aktFejDb = 0 
+    # többi sor beolvasása
+    for sor in fileBe:
+        sor = sor.strip()
+        buffer = buffer[1:4] + sor
+        dobasDb += 1
+        if sor == "F":
+            fejDb += 1
+            aktFejDb += 1
+        if buffer == ketFej:
+            ketFejDb += 1
+        if sor == "I":
+            if aktFejDb > maxFejDb:
+                maxFejDb = aktFejDb
+                maxFejIdx = dobasDb
+            aktFejDb = 0
+print(f"A kísérlet {dobasDb} dobásból állt")
 
-fileBe.close()
-
-# 3. feladat
-print("3. feladat")
-print("A kísérlet {} dobásból állt".format(dobasDb))
-
-# 4. feladat
-print("4. feladat")
+# 4. feladat: Milyen relatív gyakorisággal dobtunk a kísérlet során fejet?
+#   (A fej relatív gyakorisága a fejet eredményező dobások és az összes dobás hányadosa.)
+#   A relatív gyakoriságot a mintának megfelelően két tizedesjegy pontossággal, százalék formátumban írassa ki a képernyőre!
+print("\n4. feladat")
 gyakorisag = 100*fejDb/dobasDb
-print("A kísérlet során a fej relatív gyakorisága {:.2f}%% volt.".format(gyakorisag))
+print(f"A kísérlet során a fej relatív gyakorisága {gyakorisag:.2f}%% volt.")
 
-# 5. feladat
-print("5. feladat")
-print("A kísérlet során {} alkalommal dobtak pontosan két fejet egymás után".format(ketFejDb))
+# 5. feladat: Hányszor fordult elő ebben a kísérletben, hogy egymás után pontosan két fejet dobtunk?
+#   A választ a mintának megfelelően írassa ki a képernyőre! (Feltételezheti, hogy a kísérlet legalább 3 dobásból állt.)
+print("\n5. feladat")
+print(f"A kísérlet során {ketFejDb} alkalommal dobtak pontosan két fejet egymás után")
 
-# 6. feladat
-print("6. feladat")
-print("A leghosszabb tisztafej sorozat {} tagból állt, kezdete a(z) {}. dobás".format(maxFejDb, maxFejIdx-maxFejDb))
+# 6. feladat: Milyen hosszú volt a leghosszabb, csak fejekből álló részsorozat?
+#   Írassa ki a választ a képernyőre a mintának megfelelően, és adja meg egy ilyen részsorozat első tagjának helyét is! (A minta tagjainak számozását eggyel kezdjük.)
+print("\n6. feladat")
+print(f"A leghosszabb tisztafej sorozat {maxFejDb} tagból állt, kezdete a(z) {maxFejIdx-maxFejDb}. dobás")
 
-# 7. feladat
+# 7. feladat: Állítson elő és tároljon a memóriában 1000 db négy dobásból álló sorozatot!
+#   Számolja meg, hogy hány esetben követett egy háromtagú „tisztafej” sorozatot fej, illetve hány esetben írás!
+#   Az eredményt írassa ki a dobasok.txt állományba úgy, hogy az első sorba kerüljön az eredmény, a második sorban pedig egy-egy szóközzel elválasztva, egyetlen sorban szerepeljenek a dobássorozatok!
+print("\n7. feladat:")
 FI = "FI"
 dobasok = []
 FFFF = 0
@@ -99,9 +108,8 @@ for i in range(0,1000):
     if dobas == "FFFI":
         FFFI += 1
 
-fileKi = open("dobasok.txt", "w")
-fileKi.writelines("FFFF: {}, FFFI: {}\n".format(FFFF,FFFI))
-for dobas in dobasok:
-    fileKi.write(dobas + " ")
-fileKi.flush()
-fileKi.close()
+with open("dobasok.txt", "w") as fileKi:
+    fileKi.writelines("FFFF: {}, FFFI: {}\n".format(FFFF,FFFI))
+    for dobas in dobasok:
+        fileKi.write(dobas + " ")
+print("Adatok kiírva a 'dobasok.txt' állományba.")
