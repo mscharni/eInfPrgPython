@@ -1,0 +1,48 @@
+ 1. ülés: üres
+ 2. ülés: üres
+ 3. ülés: üres
+ 4. ülés:  33. utas
+ 5. ülés:  95. utas
+ 6. ülés: üres
+ 7. ülés:  46. utas
+ 8. ülés:  13. utas
+ 9. ülés:  31. utas
+10. ülés:  59. utas
+11. ülés:  75. utas
+12. ülés: üres
+13. ülés:  78. utas
+14. ülés:  71. utas
+15. ülés:  80. utas
+16. ülés:  67. utas
+17. ülés:  77. utas
+18. ülés:  66. utas
+19. ülés:  40. utas
+20. ülés:  26. utas
+21. ülés: üres
+22. ülés:  48. utas
+23. ülés:  17. utas
+24. ülés: üres
+25. ülés:  92. utas
+26. ülés:  24. utas
+27. ülés:  30. utas
+28. ülés:  98. utas
+29. ülés:  56. utas
+30. ülés:  44. utas
+31. ülés: üres
+32. ülés:  73. utas
+33. ülés:  69. utas
+34. ülés:  68. utas
+35. ülés:  70. utas
+36. ülés:  14. utas
+37. ülés:  94. utas
+38. ülés:  43. utas
+39. ülés:  53. utas
+40. ülés:  79. utas
+41. ülés: üres
+42. ülés:  85. utas
+43. ülés:  18. utas
+44. ülés: üres
+45. ülés:  19. utas
+46. ülés: 111. utas
+47. ülés: üres
+48. ülés: 101. utas
