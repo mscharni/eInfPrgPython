@@ -165,6 +165,8 @@ uj_prg = input("Új formátumú utasítássor = ").upper()
 regi_prog = convert_to_old(uj_prg)
 print(f"Régi formátumú utasítássor: {regi_prog}")
 
+########################################################################################################################
+# Nem része az érettségi feladatsornak!
 # tesztelési célokból visszakonvertáljuk az 'ujprog.txt' állományban lévő programokat: vissze kell kapnunk a program.txt-beli formát
 print("\n5. feladat: visszakonvertálás ellenőrző tesztje (nem része az érettséginek)")
 with open("ujprog.txt", "r") as fileBe:
@@ -180,3 +182,30 @@ with open("ujprog.txt", "r") as fileBe:
             print(f"{idx + 1:2}. konvert = {regi_prog}")
             print(f"{idx + 1:2}. eredeti = {programok[idx].program}")
         idx += 1
+
+########################################################################################################################
+# Nem része az érettségi feladatsornak!
+# Feladat: jelenítsük meg a képernyőn a robot mozgását!
+
+print("\n*. feladat: robot mozgásának megjelenítése")
+idx = int(input("Program sorszáma = "))
+program = programok[idx-1].program
+
+import turtle
+window = turtle.Screen()
+window.title(f"Robot útja - {idx}. program")
+robot = turtle.Turtle()
+prg = list(program)
+lep = 20
+utso_cmd = ""
+for cmd in prg:
+    if cmd == "E":
+        robot.setheading(90)
+    elif cmd == "K":
+        robot.setheading(0)
+    elif cmd == "D":
+        robot.setheading(270)
+    elif cmd == "N":
+        robot.setheading(180)
+    robot.forward(lep)
+turtle.done()
