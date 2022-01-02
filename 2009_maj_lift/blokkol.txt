@@ -1,0 +1,24 @@
+Indulási emelet: 6
+Cél emelet: 14
+Feladatkód: 27
+Befejezés ideje: 9:22:39
+Sikeresség: befejezetlen
+-----
+Indulási emelet: 14
+Cél emelet: 18
+Feladatkód: 45
+Befejezés ideje: 10:26:40
+Sikeresség: befejezetlen
+-----
+Indulási emelet: 18
+Cél emelet: 13
+Feladatkód: 90
+Befejezés ideje: 11:34:18
+Sikeresség: befejezetlen
+-----
+Indulási emelet: 13
+Cél emelet: 16
+Feladatkód: 8
+Befejezés ideje: 13:13:5
+Sikeresség: befejezett
+-----
