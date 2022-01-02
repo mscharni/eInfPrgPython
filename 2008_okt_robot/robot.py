@@ -91,14 +91,14 @@ idx = int(input("Program sorszáma = "))
 program = programok[idx-1]
 # a.,
 if program.egyszerusitheto:
-    print("Egyszerűsíthető")
+    print("a., Egyszerűsíthető")
 else:
-    print("Nem egyszerűsíthető")
+    print("a., Nem egyszerűsíthető")
 # b.,
-print(f"{abs(program.tav_ED)} lépést kell tenni az ED, {abs(program.tav_KN)} lépést a KN tengely mentén")
+print(f"b., {abs(program.tav_ED)} lépést kell tenni az ED, {abs(program.tav_KN)} lépést a KN tengely mentén")
 
 # c.,
-print(f"{program.max_tav_lepes}. lépésben {program.max_tav_ertek:.3f} a legnagyobb távolság.")
+print(f"c., {program.max_tav_lepes}. lépésben {program.max_tav_ertek:.3f} a legnagyobb távolság.")
 
 # 3. A robot a mozgáshoz szükséges energiát egy beépített akkuból nyeri.
 #   A robot 1 centiméternyi távolság megtételéhez 1 egység, az irányváltásokhoz és az induláshoz 2 egység energiát használ.
@@ -161,14 +161,15 @@ def convert_to_old(prg):
         prev_char = char
     return regi_prg
 
-uj_prg = input("Új formátumú utasítássor = ").upper()
+uj_prg = input("Új formátumú utasítássor  = ").upper()
 regi_prog = convert_to_old(uj_prg)
-print(f"Régi formátumú utasítássor: {regi_prog}")
+print(f"Régi formátumú utasítássor = {regi_prog}")
 
 ########################################################################################################################
 # Nem része az érettségi feladatsornak!
-# tesztelési célokból visszakonvertáljuk az 'ujprog.txt' állományban lévő programokat: vissze kell kapnunk a program.txt-beli formát
-print("\n5. feladat: visszakonvertálás ellenőrző tesztje (nem része az érettséginek)")
+# +1. feladat: Tesztelési célból konvertáljuk vissza az 'ujprog.txt' állományban lévő programokat!
+#   Eredményül írjuk ki, hogy a program helyes, vagy hibás konverzió esetében írjuk ki egymás alá két sorban a visszakonvertált és az eredeti prograsort!
+print("\n+1. feladat: Visszakonvertálási teszt (nem része az érettséginek)")
 with open("ujprog.txt", "r") as fileBe:
     idx = 0
     for line in fileBe:
@@ -185,17 +186,65 @@ with open("ujprog.txt", "r") as fileBe:
 
 ########################################################################################################################
 # Nem része az érettségi feladatsornak!
-# Feladat: jelenítsük meg a képernyőn a robot mozgását!
+# +2. Feladat: Gáborék a szertárban találtak egy régebbi típusú robot, amelyet lobot-nak neveztek el.
+#   A lobot nem rendelkezik beépített iránytűvel így az eddigi programokat át kell konvertálni a lobot nyelvére.
+#   Gáborék a lobotot mindig "E" irányba nézve helyezik a felületre, csak utána indítják el a konvertált programot.
+#   A lobot háromféle utasítást tud végrehajtani: F: előre megy egy lépésnyit. L: balra fordul 90 fokkal, R: jobbra fordul 90 fokkal.
+#   Segítsen elkészíteni a meglévő programok downgrade verzióját előállító programot!
 
-print("\n*. feladat: robot mozgásának megjelenítése")
+print("\n+2. feladat: Robot --> Lobot program konverzió")
 idx = int(input("Program sorszáma = "))
-program = programok[idx-1].program
+prg = list(programok[idx-1].program)
+prg_dg = ""
+utso_irany = "E"
+for cmd in prg:
+    # ha változik az irány, fordulni kell
+    if cmd != utso_irany:
+        if utso_irany == "E":   # északról fordul
+            if cmd == "N":
+                prg_dg += "L"
+            elif cmd == "K":
+                prg_dg += "R"
+            else:
+                prg_dg += "RR"
+        elif utso_irany == "K": # keletről fordul
+            if cmd == "E":
+                prg_dg += "L"
+            elif cmd == "D":
+                prg_dg += "R"
+            else:
+                prg_dg += "RR"
+        elif utso_irany == "D": # délről fordul
+            if cmd == "K":
+                prg_dg += "L"
+            elif cmd == "N":
+                prg_dg += "R"
+            else:
+                prg_dg += "RR"
+        else:                   # nyugaról fordul
+            if cmd == "D":
+                prg_dg += "L"
+            elif cmd == "E":
+                prg_dg += "R"
+            else:
+                prg_dg += "RR"
+        utso_irany = cmd
+    # lépni kell egyet
+    prg_dg += "F"
+print(f"Robot program: {programok[idx-1].program}")
+print(f"Lobot program: {prg_dg}")
+
+########################################################################################################################
+# Nem része az érettségi feladatsornak!
+# +3. Feladat: jelenítsük meg a képernyőn a robot mozgását!
+print("\n+3. feladat: Robot mozgásának megjelenítése a grafikus formában")
+idx = int(input("Program sorszáma = "))
 
 import turtle
 window = turtle.Screen()
 window.title(f"Robot útja - {idx}. program")
 robot = turtle.Turtle()
-prg = list(program)
+prg = list(programok[idx-1].program)
 lep = 20
 utso_cmd = ""
 for cmd in prg:
@@ -209,3 +258,4 @@ for cmd in prg:
         robot.setheading(180)
     robot.forward(lep)
 turtle.done()
+
