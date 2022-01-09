@@ -1,0 +1,232 @@
+00:01:00 - 00:06:03 [303] Deep Purple              :Bad Attitude                  
+00:07:03 - 00:10:30 [207] Eric Clapton             :Willie And The Hand Jive      
+00:11:30 - 00:16:25 [295] Deep Purple              :Don't Make Me Happy           
+00:17:25 - 00:20:54 [209] Eric Clapton             :Crosscut Saw                  
+00:21:54 - 00:27:01 [307] Eric Clapton             :Bad Love                      
+00:28:01 - 00:32:36 [275] Deep Purple              :Mad Dog                       
+00:33:36 - 00:37:45 [249] Omega                    :Torekeny lendulet             
+00:38:45 - 00:43:08 [263] AC/DC                    :Evil Walks                    
+00:44:08 - 00:49:15 [307] Eric Clapton & B.B. King :Help The Poor                 
+00:50:15 - 00:54:33 [258] Omega                    :Holdfeny-negyed               
+01:00:00 - 01:03:00 [180] *** == - Hírek - == ***
+01:04:00 - 01:10:16 [376] AC/DC                    :Night Prowler                 
+01:11:16 - 01:14:41 [205] AC/DC                    :Night Of The Long Knives      
+01:15:41 - 01:16:11 [ 30] Eric Clapton             :One More Driver One More Car  
+01:17:11 - 01:22:01 [290] Eric Clapton             :Motherless Children           
+01:23:01 - 01:27:08 [247] Eric Clapton             :Kind Hearted Woman Blues      
+01:28:08 - 01:31:55 [227] Eric Clapton             :Get Ready                     
+01:32:55 - 01:36:54 [239] Deep Purple              :Nobody's Home                 
+01:37:54 - 01:42:01 [247] Deep Purple              :Talk About Love               
+01:43:01 - 01:46:41 [220] Eric Clapton             :Carnival                      
+01:47:41 - 01:50:42 [181] Eric Clapton             :From Four Until Late          
+01:51:42 - 01:53:26 [104] Eric Clapton             :Party                         
+01:54:26 - 01:58:52 [266] AC/DC                    :Touch Too Much                
+02:00:00 - 02:03:00 [180] *** == - Hírek - == ***
+02:04:00 - 02:08:20 [260] Deep Purple              :Mean Streak                   
+02:09:20 - 02:13:54 [274] Deep Purple              :And The Address               
+02:14:54 - 02:19:42 [288] Eric Clapton             :Five Long Years               
+02:20:42 - 02:25:30 [288] Omega                    :Az utolso ora                 
+02:26:30 - 02:31:41 [311] Omega                    :Veszkijarat                   
+02:32:41 - 02:36:09 [208] AC/DC                    :Highway To Hell               
+02:37:09 - 02:44:45 [456] Omega                    :Nem tudom a neved             
+02:45:45 - 02:46:22 [ 37] Deep Purple              :Goodnight Vienna              
+02:47:22 - 02:51:17 [235] Eric Clapton             :Before you accuse me          
+03:00:00 - 03:03:00 [180] *** == - Hírek - == ***
+03:04:00 - 03:09:23 [323] Omega                    :Nevtelen utazo                
+03:10:23 - 03:15:11 [288] Omega                    :A buvesz                      
+03:16:11 - 03:19:46 [215] Eric Clapton             :Hello Old Friend              
+03:20:46 - 03:25:56 [310] Deep Purple              :Our Lady                      
+03:26:56 - 03:32:45 [349] Omega                    :Gyongyhaju lany               
+03:33:45 - 03:39:42 [357] Eric Clapton             :Worried Life Blues            
+03:40:42 - 03:46:02 [320] AC/DC                    :Shoot to thrill               
+03:47:02 - 03:50:58 [236] Eric Clapton             :See What Love Can Do          
+03:51:58 - 03:58:56 [418] Eric Clapton             :Badge                         
+04:00:00 - 04:03:00 [180] *** == - Hírek - == ***
+04:04:00 - 04:08:00 [240] Eric Clapton             :Ain't Going Down              
+04:09:00 - 04:13:41 [281] Omega                    :Bibor holgy                   
+04:14:41 - 04:20:05 [324] Omega                    :Holnap                        
+04:21:05 - 04:26:17 [312] Eric Clapton             :Crossroads                    
+04:27:17 - 04:32:19 [302] Eric Clapton             :Rita Mae                      
+04:33:19 - 04:35:55 [156] Frank Zappa              :For The Young Sophisticate    
+04:36:55 - 04:41:20 [265] Eric Clapton & B.B. King :Riding With The King          
+04:42:20 - 04:47:09 [289] Omega                    :Eltakart vilag                
+04:48:09 - 04:52:11 [242] AC/DC                    :Can't Stop Rock 'N' Roll      
+04:53:11 - 04:57:21 [250] Deep Purple              :Sun Goes Down                 
+05:00:00 - 05:03:00 [180] *** == - Hírek - == ***
+05:04:00 - 05:07:34 [214] Deep Purple              :Gettin' Tighter               
+05:08:34 - 05:14:25 [351] Deep Purple              :Time To Kill                  
+05:15:25 - 05:16:25 [ 60] Omega                    :A latogato                    
+05:17:25 - 05:22:00 [275] AC/DC                    :Whiskey On The Rocks          
+05:23:00 - 05:25:54 [174] AC/DC                    :Fire Your Guns                
+05:26:54 - 05:30:56 [242] Omega                    :Oh, jojj!                     
+05:31:56 - 05:37:26 [330] Deep Purple              :Why Didn't Rosemary?          
+05:38:26 - 05:42:12 [226] AC/DC                    :Satellite Blues               
+05:43:12 - 05:47:08 [236] Omega                    :A feher hollo                 
+05:48:08 - 05:52:07 [239] Deep Purple              :Never Before                  
+05:53:07 - 05:57:38 [271] Omega                    :Nyari ejek asszonya           
+06:00:00 - 06:03:00 [180] *** == - Hírek - == ***
+06:04:00 - 06:09:01 [301] Eric Clapton & B.B. King :Marry You                     
+06:10:01 - 06:14:44 [283] Deep Purple              :You Fool No One               
+06:15:44 - 06:20:48 [304] Eric Clapton             :I Go Back Home                
+06:21:48 - 06:28:39 [411] Eric Clapton             :All Your Love                 
+06:29:39 - 06:35:17 [338] Omega                    :Egy nehez ev utan             
+06:36:17 - 06:39:55 [218] Omega                    :A konyvelo alma               
+06:40:55 - 06:44:28 [213] Eric Clapton             :Smile                         
+06:45:28 - 06:48:40 [192] Deep Purple              :Soldier Of Fortune            
+06:49:40 - 06:53:11 [211] Omega                    :Addig elj                     
+06:54:11 - 06:57:32 [201] Eric Clapton             :Lovin' You Lovin' Me          
+07:00:00 - 07:03:00 [180] *** == - Hírek - == ***
+07:04:00 - 07:08:50 [290] Omega                    :Mozgo vilag                   
+07:09:50 - 07:13:56 [246] AC/DC                    :Shake a leg                   
+07:14:56 - 07:19:32 [276] Deep Purple              :A Touch Away                  
+07:20:32 - 07:21:53 [ 81] Omega                    :Delutani szerelem             
+07:22:53 - 07:28:39 [346] Frank Zappa              :Bamboozled by Love            
+07:29:39 - 07:33:25 [226] AC/DC                    :First Blood                   
+07:34:25 - 07:40:41 [376] Omega                    :Huszadik szazadi varoslako    
+07:41:41 - 07:49:49 [488] Eric Clapton             :Same Old Blues                
+07:50:49 - 07:56:40 [351] AC/DC                    :The Jack                      
+08:00:00 - 08:03:00 [180] *** == - Hírek - == ***
+08:04:00 - 08:09:19 [319] Deep Purple              :You Keep On Moving            
+08:10:19 - 08:14:23 [244] Eric Clapton             :Mainline Florida              
+08:15:23 - 08:20:28 [305] Deep Purple              :Mitzie Dupree                 
+08:21:28 - 08:25:08 [220] AC/DC                    :Rock 'N' Roll Damnation       
+08:26:08 - 08:34:57 [529] Omega                    :Varazslatos feher ko          
+08:35:57 - 08:41:18 [321] Deep Purple              :Demon's eye                   
+08:42:18 - 08:45:58 [220] Eric Clapton             :Kristen And Jim               
+08:46:58 - 08:51:12 [254] AC/DC                    :Caught With Your Pants Down   
+08:52:12 - 08:54:51 [159] Omega                    :Rozsafak                      
+08:55:51 - 08:59:08 [197] AC/DC                    :There's Gonna Be Some Rockin' 
+09:00:00 - 09:03:00 [180] *** == - Hírek - == ***
+09:04:00 - 09:08:47 [287] Deep Purple              :Soon Forgotten                
+09:09:47 - 09:15:44 [357] Deep Purple              :The Battle Rages On           
+09:16:44 - 09:23:17 [393] Eric Clapton             :Floating Bridge               
+09:24:17 - 09:30:25 [368] Deep Purple              :Highway Star                  
+09:31:25 - 09:36:35 [310] Eric Clapton             :Kind Hearted Woman            
+09:37:35 - 09:41:48 [253] AC/DC                    :Hell Ain't A Bad Place To Be [Live]
+09:42:48 - 09:47:01 [253] Eric Clapton             :Slow Down Linda               
+09:48:01 - 09:51:39 [218] Frank Zappa              :Tink Walks Amok               
+09:52:39 - 09:58:45 [366] Eric Clapton             :Groaning The Blues            
+10:00:00 - 10:03:00 [180] *** == - Hírek - == ***
+10:04:00 - 10:08:19 [259] Omega                    :Gonosz varos                  
+10:09:19 - 10:12:18 [179] Eric Clapton             :Easy Now                      
+10:13:18 - 10:18:00 [282] AC/DC                    :Dog Eat Dog [Live]            
+10:19:00 - 10:22:27 [207] Omega                    :A jovendomondo                
+10:23:27 - 10:29:46 [379] Omega                    :Megszentelt vilag             
+10:30:46 - 10:34:36 [230] Eric Clapton             :Will Gaines                   
+10:35:36 - 10:40:41 [305] AC/DC                    :Gone Shootin'                 
+10:41:41 - 10:51:00 [559] Frank Zappa              :Easy Meat                     
+10:52:00 - 10:54:56 [176] Eric Clapton             :Me And The Devil Blues        
+10:55:56 - 10:59:45 [229] Eric Clapton             :Walk Away                     
+11:00:00 - 11:03:00 [180] *** == - Hírek - == ***
+11:04:00 - 11:08:55 [295] Deep Purple              :The Painter                   
+11:09:55 - 11:14:07 [252] Omega                    :Judas                         
+11:15:07 - 11:22:16 [429] Eric Clapton & B.B. King :When My Heart Beats Like A Hammer
+11:23:16 - 11:28:06 [290] Omega                    :Bibor hajnal                  
+11:29:06 - 11:34:35 [329] Omega                    :200 evvel az utolso haboru utan
+11:35:35 - 11:40:30 [295] Deep Purple              :Evil Louie                    
+11:41:30 - 11:45:57 [267] Deep Purple              :Holy Man                      
+11:46:57 - 11:53:00 [363] Omega                    :Holdvirag                     
+11:54:00 - 11:58:06 [246] Omega                    :Naplemente                    
+12:00:00 - 12:03:00 [180] *** == - Hírek - == ***
+12:04:00 - 12:07:12 [192] Eric Clapton             :Don't Know Why                
+12:08:12 - 12:13:42 [330] Deep Purple              :Fault Line                    
+12:14:42 - 12:18:34 [232] AC/DC                    :Bedlam In Belgium             
+12:19:34 - 12:22:55 [201] AC/DC                    :Gimme A Bullet                
+12:23:55 - 12:34:43 [648] Eric Clapton             :Don't Know Which Way To Go    
+12:35:43 - 12:38:18 [155] Omega                    :Legy eros                     
+12:39:18 - 12:42:55 [217] Omega                    :A madar                       
+12:43:55 - 12:49:03 [308] Omega                    :Orultek oraja                 
+12:50:03 - 12:55:51 [348] Deep Purple              :Fortuneteller                 
+12:56:51 - 12:59:23 [152] Eric Clapton             :I've Told You For The Last Time
+13:00:00 - 13:03:00 [180] *** == - Hírek - == ***
+13:04:00 - 13:09:53 [353] Deep Purple              :No One Came                   
+13:10:53 - 13:16:24 [331] Deep Purple              :Chasing Shadows               
+13:17:24 - 13:20:37 [193] AC/DC                    :Flick Of The Switch           
+13:21:37 - 13:23:52 [135] Omega                    :Nem vagy szep                 
+13:24:52 - 13:31:22 [390] Deep Purple              :Anthem                        
+13:32:22 - 13:35:41 [199] AC/DC                    :C.O.D.                        
+13:36:41 - 13:40:24 [223] Eric Clapton             :Black Rose                    
+13:41:24 - 13:44:13 [169] AC/DC                    :Rocker                        
+13:45:13 - 13:50:28 [315] AC/DC                    :It's a Long Way To The Top    
+13:51:28 - 13:54:40 [192] Eric Clapton             :Hard Times                    
+14:00:00 - 14:03:00 [180] *** == - Hírek - == ***
+14:04:00 - 14:07:41 [221] Omega                    :Jart itt egy boldog ember     
+14:08:41 - 14:13:33 [292] Deep Purple              :Maybe I'm A Leo               
+14:14:33 - 14:17:49 [196] Omega                    :Petroleumlampa                
+14:18:49 - 14:23:11 [262] AC/DC                    :The Razors Edge               
+14:24:11 - 14:28:00 [229] Omega                    :Az arc                        
+14:29:00 - 14:34:01 [301] Deep Purple              :Lalena                        
+14:35:01 - 14:38:53 [232] AC/DC                    :Damned                        
+14:39:53 - 14:44:41 [288] Deep Purple              :Call Of The Wild              
+14:45:41 - 14:50:19 [278] Deep Purple              :One Man's Meat                
+14:51:19 - 14:56:22 [303] Deep Purple              :Hold On                       
+15:00:00 - 15:03:00 [180] *** == - Hírek - == ***
+15:04:00 - 15:15:52 [712] Deep Purple              :Bird Has Flown + April        
+15:16:52 - 15:20:48 [236] AC/DC                    :House Of Jazz                 
+15:21:48 - 15:25:41 [233] Eric Clapton             :Hell Hound On My Trail        
+15:26:41 - 15:31:55 [314] AC/DC                    :Hells Bells                   
+15:32:55 - 15:37:37 [282] AC/DC                    :Jailbreak                     
+15:38:37 - 15:42:37 [240] Deep Purple              :Lick It Up                    
+15:43:37 - 15:47:00 [203] Omega                    :Yeshiva eneke                 
+15:48:00 - 15:55:04 [424] Omega                    :Nelkuled                      
+16:00:00 - 16:03:00 [180] *** == - Hírek - == ***
+16:04:00 - 16:07:45 [225] Eric Clapton             :Man Overboard                 
+16:08:45 - 16:16:10 [445] Deep Purple              :Mistreated                    
+16:17:10 - 16:20:56 [226] Omega                    :Metamorfozis I                
+16:21:56 - 16:29:07 [431] Deep Purple              :Hard lovin+ man               
+16:30:07 - 16:35:47 [340] Eric Clapton             :Another Ticket                
+16:36:47 - 16:41:14 [267] AC/DC                    :Go Zone                       
+16:42:14 - 16:45:56 [222] Omega                    :A penz                        
+16:46:56 - 16:51:55 [299] Omega                    :Segits nekem!                 
+16:52:55 - 16:56:40 [225] AC/DC                    :That's The Way I Wanna Rock N Roll
+17:00:00 - 17:03:00 [180] *** == - Hírek - == ***
+17:04:00 - 17:08:53 [293] AC/DC                    :Thunderstruck                 
+17:09:53 - 17:13:51 [238] Omega                    :Felbeszakadt koncert          
+17:14:51 - 17:19:32 [281] Eric Clapton & B.B. King :Ten Long Years                
+17:20:32 - 17:26:10 [338] Omega                    :Regvart kedvesem              
+17:27:10 - 17:30:38 [208] Deep Purple              :Razzle Dazzle                 
+17:31:38 - 17:34:50 [192] Eric Clapton             :Signe                         
+17:35:50 - 17:41:27 [337] Omega                    :Fenymadar                     
+17:42:27 - 17:46:38 [251] Eric Clapton             :I Can`t Hold Out              
+17:47:38 - 17:52:55 [317] Deep Purple              :Breakfast in bed              
+17:53:55 - 17:58:10 [255] Omega                    :Nem tilthatom meg             
+18:00:00 - 18:03:00 [180] *** == - Hírek - == ***
+18:04:00 - 18:07:24 [204] AC/DC                    :Send For The Man              
+18:08:24 - 18:14:33 [369] Frank Zappa              :I Come From Nowhere           
+18:15:33 - 18:18:56 [203] Eric Clapton             :San francisco bay blues       
+18:19:56 - 18:24:18 [262] AC/DC                    :Danger                        
+18:25:18 - 18:28:47 [209] Omega                    :Vigyazz rank!                 
+18:29:47 - 18:33:23 [216] Eric Clapton             :Malted milk                   
+18:34:23 - 18:41:20 [417] Eric Clapton             :Driftin' Blues                
+18:42:20 - 18:46:27 [247] Omega                    :Babylon                       
+18:47:27 - 18:57:02 [575] Deep Purple              :Strange Kind Of Women         
+19:00:00 - 19:03:00 [180] *** == - Hírek - == ***
+19:04:00 - 19:07:56 [236] Omega                    :artatlan gyujtgatok           
+19:08:56 - 19:13:18 [262] Eric Clapton             :I Shot The Sheriff            
+19:14:18 - 19:18:42 [264] AC/DC                    :This Means War                
+19:19:42 - 19:24:24 [282] Eric Clapton             :Behind The Mask               
+19:25:24 - 19:31:26 [362] Eric Clapton             :Never Make You Cry            
+19:32:26 - 19:35:41 [195] Eric Clapton             :Everybody Oughta Make A Change
+19:36:41 - 19:42:30 [349] Deep Purple              :Sail Away                     
+19:43:30 - 19:47:00 [210] Frank Zappa              :Fine Girl                     
+19:48:00 - 19:53:01 [301] Eric Clapton             :Let It Rain                   
+19:54:01 - 19:57:21 [200] Frank Zappa              :We Are Not Alone              
+20:00:00 - 20:03:00 [180] *** == - Hírek - == ***
+20:04:00 - 20:10:19 [379] Eric Clapton             :Grand Illusion                
+20:11:19 - 20:15:35 [256] Omega                    :Ahol a boldogsagot osztottak  
+20:16:35 - 20:18:02 [ 87] Deep Purple              :Contact Lost                  
+20:19:02 - 20:20:49 [107] Eric Clapton             :Country Bikin'                
+20:21:49 - 20:25:54 [245] Eric Clapton             :Run so far                    
+20:26:54 - 20:30:14 [200] Eric Clapton             :Preludin Fugue                
+20:31:14 - 20:34:36 [202] Omega                    :Van egy szo                   
+20:35:36 - 20:39:08 [212] AC/DC                    :What's Next To The Moon       
+20:40:08 - 20:45:07 [299] Omega                    :Bucsuztato-Szvit              
+20:46:07 - 20:49:45 [218] Eric Clapton             :Standin' Round Crying         
+20:50:45 - 20:54:04 [199] Eric Clapton             :Something's Happening         
+21:00:00 - 21:03:00 [180] *** == - Hírek - == ***
+21:04:00 - 21:08:27 [267] Omega                    :Ballada a fegyverkovacs fiarol
+21:09:27 - 21:14:48 [321] AC/DC                    :Two's Up                      
+21:15:48 - 21:20:44 [296] Eric Clapton             :I Can Wait                    
+21:21:44 - 21:27:12 [328] Omega                    :Hazafele                      
+21:28:12 - 21:33:12 [300] Frank Zappa              :Pick Me, I'm Clean            
+21:34:12 - 21:36:47 [155] Eric Clapton             :Last Fair Deal Gone Down      

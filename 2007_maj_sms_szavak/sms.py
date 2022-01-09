@@ -1,3 +1,4 @@
+# 2007 május - SMS - Emelt Informatika Érettségi feladat
 kod = {
     "a" : "2",
     "b" : "2",
