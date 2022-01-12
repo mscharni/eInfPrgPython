@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2009 Május - Lift
+
 import random
 
 class Igeny():
