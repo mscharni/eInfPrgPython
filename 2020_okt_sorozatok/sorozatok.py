@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2020 Október - Sorozatok
+
 import datetime
 
 # struktúra
@@ -136,10 +138,8 @@ with open(fileName, 'w') as fileKi:
             lastSum += epizod['hossz']
             lastCount +=1
         else:
-            fileKi.writelines("{0} {1} {2}\n".format(lastCim, lastSum, lastCount))
+            fileKi.write("{0} {1} {2}\n".format(lastCim, lastSum, lastCount))
             lastCim = epizod['cim']
             lastSum = epizod['hossz']
             lastCount = 1
 print(f"Adatok kiírva a '{fileName}' állományba!")
-
-
