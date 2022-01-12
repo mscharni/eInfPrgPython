@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2018 Május - Társalgó
+
 # adatszerkezet naplóbeli bejegyzés és személy
 class Adat:
     azo = 0
@@ -69,7 +71,7 @@ for adat in adatok:
 with open("athaladas.txt", "w") as fileKi:
     for szemely in szemelyek:
         if szemely.atlep != 0:
-            fileKi.writelines(str(szemely.azo) + " " + str(szemely.atlep) +"\n")
+            fileKi.write(str(szemely.azo) + " " + str(szemely.atlep) +"\n")
 print("Adatok kiírva az 'athaladas.txt' állományba.")
 
 # 4. feladat: Írja a képernyőre azon személyek azonosítóját, akik a vizsgált időszak végén a társalgóban tartózkodtak!
