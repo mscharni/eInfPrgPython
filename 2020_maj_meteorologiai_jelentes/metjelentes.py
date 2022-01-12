@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2020 Május - Meteorológiai jelentés
+
 # adatok
 orak = ["01", "07", "13", "19"] # azon órák felsorolva, amelyket számolni kell
 
@@ -136,5 +138,5 @@ for telep in telepek:
         fileKi.writelines(f"{fileKiNev}\n")
         for tavirat in taviratok:
             if telep.hely == tavirat.hely:
-                fileKi.writelines(f"{tavirat.getIdo()} {tavirat.getSzelEro()}\n")
+                fileKi.write(f"{tavirat.getIdo()} {tavirat.getSzelEro()}\n")
 print("A fájlok elkészültek.")
