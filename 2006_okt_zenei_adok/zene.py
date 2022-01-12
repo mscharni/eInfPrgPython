@@ -1,4 +1,4 @@
-# Emelt Informatika Érettségi - 2006 október - Zenei adók
+### Emelt Informatika Érettségi - 2006 október - Zenei adók
 
 class Zene():
     def __init__(self, line):
