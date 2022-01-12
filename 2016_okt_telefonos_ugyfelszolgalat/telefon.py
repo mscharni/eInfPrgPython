@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2016 Október - Telefonos ügyfélszolgálat
+
 # adatszerkezet
 class Hivas:
     sorszam = 0
@@ -111,5 +113,5 @@ print(f"Az utolso telefonalo adatai a(z) {fogadottak[ufhi].sorszam}. sorban vann
 print("\n7. feladat")
 with open("sikeres.txt", "w") as fileKi:
     for fogadott in fogadottak:
-        fileKi.writelines(f"{fogadott.sorszam} {fogadott.kidoS} {fogadott.vidoS}\n")
+        fileKi.write(f"{fogadott.sorszam} {fogadott.kidoS} {fogadott.vidoS}\n")
 print("Adatok kiírva a 'sikeres.txt' állományba")
