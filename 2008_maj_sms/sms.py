@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2008 Május - SMS
+
 class Uzenet():
     def __init__(self, idx, line_1, line_2):
         self.idx = idx
