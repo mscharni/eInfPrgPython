@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2016 Május - Ötszáz
+
 # kosár kezelésére szolgáló osztály
 class Kosar:
 	def __init__(self):
@@ -122,5 +124,5 @@ for termek in kosarak[beSzam-1].termekek:
 print("\n8. feladat")
 with open("osszeg.txt", "w") as fileKi:
     for kosar in kosarak:
-        fileKi.writelines("{}: {}\n".format(kosar.sorszam, kosar.osszAr))
+        fileKi.write("{}: {}\n".format(kosar.sorszam, kosar.osszAr))
 print("Adatok kiírva az 'osszeg.txt' állományba")
