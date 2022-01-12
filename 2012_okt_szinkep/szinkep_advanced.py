@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2012 Október - Színkép
+
 class Szin():
    def __init__(self, line = "0 0 0"):
         self.RGB = line.strip()
@@ -170,7 +172,7 @@ print("\nA. megoldás:")
 with open("keretes_a.txt", "w") as fileKi:
     for i in range(0, kep_a.rows):
         for j in range(0, kep_a.cols):
-            fileKi.writelines(kep_a.pontok[i][j].RGB +"\n")
+            fileKi.write(kep_a.pontok[i][j].RGB +"\n")
 print("Adatok kiírva a 'keretes_a.txt' állományba")
 
 # Gyakorlatilag ugyanaz a megoldás, csak másik képpel
@@ -178,7 +180,7 @@ print("\nB. megoldás:")
 with open("keretes_b.txt", "w") as fileKi:
     for i in range(0, kep_b.rows):
         for j in range(0, kep_b.cols):
-            fileKi.writelines(kep_b.pontok[i][j].RGB +"\n")
+            fileKi.write(kep_b.pontok[i][j].RGB +"\n")
 print("Adatok kiírva a 'keretes_b.txt' állományba")
 
 # 7. Feladat: Az 50×50-es képen a kerettől függetlenül egy sárga RGB (255, 255, 0) színű téglalap van.
