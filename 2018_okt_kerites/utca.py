@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2018 Október - Kerítés
+
 class Haz:
 	oldal =  0
 	hazszam = 0
@@ -97,7 +99,7 @@ with open("utcakep.txt", "w") as fileKi:
         szamhossz = haz.hossz - len(str(haz.hazszam))       # a ház hosszából le kell vonni a házszám karaktereinek számát
         utcaszin += haz.szin * haz.hossz
         utcaszam += str(haz.hazszam) + " " * (szamhossz)    # a számhossznak megfelelő számú szóköz előállítása
-    fileKi.writelines(utcaszin)
-    fileKi.writelines("\n")
-    fileKi.writelines(utcaszam)
+    fileKi.write(utcaszin)
+    fileKi.write("\n")
+    fileKi.write(utcaszam)
 print("Adatok kiírva az 'utcakep.txt' állományba")
