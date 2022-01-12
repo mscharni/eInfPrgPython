@@ -123,5 +123,5 @@ with open("stat.txt", "w") as fileKi:
         db = statisztika[i]
         if db > 0:
             # tizesek - egyesek : sb
-            fileKi.writelines(f"{i // 10}-{i-10*(i // 10)}: {db:2} darab\n")
+            fileKi.write(f"{i // 10}-{i-10*(i // 10)}: {db:2} darab\n")
 print("Adatok kiírva a 'stat.txt' állományba")
