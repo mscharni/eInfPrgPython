@@ -1,4 +1,6 @@
-# szóban szereplő betűk
+### Emelt Informatika Érettségi - 2010 Október - Anagramma
+
+# szóban szereplő betűk ábécé sorrendben
 def get_szo_betui(szo):
     betuk = []
     for c in szo:
@@ -134,10 +136,10 @@ with open("rendezve.txt", "w") as fileKi:
         else:
             # nem anagramma
             # kiírjuk az eddigi sort (az utolsó szóközt levágva)
-            fileKi.writelines(line[:-1]+"\n")
+            fileKi.write(line[:-1]+"\n")
             # ha hosszabb, mint az előző, akkor plusz sortörés
             if (len(ujszo['key']) > len(last_key)):
-                fileKi.writelines("\n")
+                fileKi.write("\n")
             # újrakezdjük a kiirandó sort
             line = ujszo['szo'] + " "
             # beállítjuk az új kulcsot
