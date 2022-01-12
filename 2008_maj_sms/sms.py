@@ -151,7 +151,7 @@ with open("smski.txt", "w", encoding="utf-8") as fileKi:
     for uzenet in uzenetek:
         # ha eltér az utolsó telefontól, akkor új csoport kezdősik
         if uzenet.tel != utso_tel:
-            fileKi.writelines(f"{uzenet.tel}\n")
+            fileKi.write(f"{uzenet.tel}\n")
             utso_tel = uzenet.tel
         # kiírjuk az üzenet adatait
-        fileKi.writelines(f"{uzenet.ora} {uzenet.perc} {uzenet.sms}\n")
+        fileKi.write(f"{uzenet.ora} {uzenet.perc} {uzenet.sms}\n")
