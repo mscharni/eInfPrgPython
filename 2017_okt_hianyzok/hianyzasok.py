@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2017 Október - Hianyzasok
+
 class Hianyzo:
 	ho = 0
 	nap = 0
