@@ -1,4 +1,5 @@
 ### Emelt Informatika Érettségi - 2010 Május - Helyjegy
+
 class Jegy():
     def __init__(self, idx, line):
         global ossz_bevetel
@@ -108,5 +109,5 @@ for jegy in jegyek:
 
 with open("kihol.txt", "w", encoding="UTF-8") as fileKi:
     for i in range(1,49):
-        fileKi.writelines(f"{i:2}. ülés: {ulesek[i]}\n")
+        fileKi.write(f"{i:2}. ülés: {ulesek[i]}\n")
 print("Adatok kiírva a 'kihol.txt' állományba.")
