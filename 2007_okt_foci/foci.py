@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2007 Október - Foci
+
 class Merkozes():
     def __init__(self, idx, line):
         datas = line.strip().split(" ")
