@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2006 Február - Telefonszámla
+
 class Hivas():
     def __init__(self, line1, line2):
         self.ido = line1.strip()                # hívás tól-ig eredeti formában
