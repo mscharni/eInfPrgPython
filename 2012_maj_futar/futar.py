@@ -1,3 +1,4 @@
+### Emelt Informatika Érettségi - 2012 Május - Futár
 class Fuvar:
      def __init__(self, line):
         global heti_fizetes
@@ -35,8 +36,8 @@ heti_fizetes = 0
 
 # 1. Olvassa be a tavok.txt állományban talált adatokat, s annak felhasználásával oldja meg a következő feladatokat!
 print("\n1. feladat")
-with open("tavok.txt", "r") as file:
-    for line in file:
+with open("tavok.txt", "r") as fileBe:
+    for line in fileBe:
         fuvar = Fuvar(line)
         fuvarok.append(fuvar)
 # a további feladatok megoldásához érdemes rendezni az adatokat nap és azon belül futárszám szerint
@@ -86,9 +87,9 @@ print(f"A {tav} km hosszú útra {fizetes(tav)} Ft a fizetség.")
 # 8. Határozza meg az összes rögzített út ellenértékét!
 #   Ezeket az értékeket írja ki a dijazas.txt állományba nap szerint, azon belül pedig az út sorszáma szerinti növekvő sorrendben
 print("\n8. feladat")
-with open("dijazas.txt", "w") as file:
+with open("dijazas.txt", "w") as fileKi:
     for fuvar in fuvarok:
-        file.writelines(f"{fuvar.nap}. nap {fuvar.fszam}. út: {fuvar.fizu} Ft")
+        fileKi.write(f"{fuvar.nap}. nap {fuvar.fszam}. út: {fuvar.fizu} Ft")
 
 # 9. Határozza meg, és írja ki a képernyőre, hogy a futár mekkora összeget kap a heti munkájáért!
 print("\n9. feladat")
