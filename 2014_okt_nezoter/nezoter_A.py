@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2014 Október - Nézőtér
+
 nezoter = []
 kategoria = []
 maxSor = 15
