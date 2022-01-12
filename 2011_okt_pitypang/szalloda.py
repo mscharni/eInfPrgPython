@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2011 Október - Pitypang
+
 class Foglalas():
     def __init__(self, line):
         datas   = line.strip().split()
@@ -50,19 +52,19 @@ foglalasok = []
 # 1. feladat: Olvassa be az pitypang.txt állományban található maximum 1 000 foglalás adatát, s annak felhasználásával oldja meg a következő feladatokat!
 print("\n1. feladat")
 #   honap adatok betöltése
-with open("honapok.txt") as file:
+with open("honapok.txt") as fileBe:
     for i in range(1, 13):
-        honap_nev = file.readline().strip()
-        honap_napok = int(file.readline().strip())
-        honap_start = int(file.readline().strip())
+        honap_nev = fileBe.readline().strip()
+        honap_napok = int(fileBe.readline().strip())
+        honap_start = int(fileBe.readline().strip())
         honap[i] = honap_start
 # a legutolsó hónap fiktív, hogy az előttiként megtaláljuk az utolsót
 honap[13] = 366
 
 #   foglalasi adatok betöltése
-with open("pitypang.txt") as file:
-    file.readline()         # az első sor a foglalások számát tartalmazza
-    for line in file:
+with open("pitypang.txt") as fileBe:
+    fileBe.readline()         # az első sor a foglalások számát tartalmazza (nem használjuk)
+    for line in fileBe:
         foglalasok.append(Foglalas(line))
 print("adatok betöltve a 'pitypang.txt' állományból")
 
@@ -83,9 +85,9 @@ print(f"{max_fog.nevazo} ({max_fog.erknap}) – {max_fog.napdb}")
 # 3. feladat: Számítsa ki, hogy az egyes foglalások után mennyit kell fizetnie az egyes vendégeknek!
 #   A foglalás sorszámát és a kiszámított értékeket kettősponttal elválasztva írja ki a bevetel.txt fájlba!
 print("\n3.feladat")
-with open("bevetel.txt", "w") as file:
+with open("bevetel.txt", "w") as fileKi:
     for foglalas in foglalasok:
-        file.writelines(f"{foglalas.sorsz}:{foglalas.szamla}\n")
+        fileKi.write(f"{foglalas.sorsz}:{foglalas.szamla}\n")
 print("Adatok kiírva a 'bevetel.txt' állományba")
 
 # 4. feladat: Készítsen statisztikát az egyes hónapokban eltöltött vendégéjszakákról!
