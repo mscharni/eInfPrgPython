@@ -122,6 +122,6 @@ with open("also.txt", "w") as fileKi:
             if ki_ido < utso_ki_ido:
                 # utolérte az előző kocsit, ezért a kilépési idejét az utolsó kilépési időre állítjuk
                 ki_ido = utso_ki_ido
-            fileKi.writelines(get_ido(ki_ido)+"\n")
+            fileKi.write(get_ido(ki_ido)+"\n")
             utso_ki_ido = ki_ido                        # frissítjük az utolsó kilépési időt
 print("Adatok kiírva a 'also.txt' állományba")
