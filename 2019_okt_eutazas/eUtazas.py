@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2019 Október - eUtazás
+
 class Utas:
     def __init__(self,s):
         self.megallo = int(s[0])
@@ -104,5 +106,5 @@ with open("figyelmeztetes.txt", "w") as fileKi:
             h2 = int(utas.eDatum[4:6])
             n2 = int(utas.eDatum[6:8])
             if napokszama(e1, h1, n1, e2, h2, n2) <=3:
-                fileKi.writelines(f"{utas.kID} {e2}-{h2}-{n2}\n")
+                fileKi.write(f"{utas.kID} {e2}-{h2}-{n2}\n")
 print("Adatok kiírva a 'figyelmeztetes.txt' állományba")
