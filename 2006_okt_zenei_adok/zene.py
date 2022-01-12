@@ -1,4 +1,5 @@
-# 2006 október - Zenei adók - Emelt Informatika Érettségi feladat
+# Emelt Informatika Érettségi - 2006 október - Zenei adók
+
 class Zene():
     def __init__(self, line):
         # először kettőspont szerint szeletelünk, mert abból csak egy van
