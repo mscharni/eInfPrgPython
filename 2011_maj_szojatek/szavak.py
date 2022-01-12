@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2011 Május - Szójáték
+
 # 1. Kérjen be a felhasználótól egy szót, és döntse el, hogy tartalmaz-e magánhangzót!
 #   Amennyiben tartalmaz, írja ki, hogy „Van benne magánhangzó.”! Ha nincs, akkor írja ki, hogy „Nincs benne magánhangzó.”!
 #   A begépelendő szóról feltételezheti, hogy csak az angol ábécé kisbetűit tartalmazza.
@@ -27,8 +29,8 @@ magan_szavak = ""
 magan_szo = 0
 ossz_szo = 0
 ot_szo = []
-with open("szoveg.txt", "r") as file:
-    for line in file:
+with open("szoveg.txt", "r") as fileBe:
+    for line in fileBe:
         ossz_szo += 1
         szo = line.strip()
         if len(szo) < count_maganhangzo(szo) * 2:
@@ -88,7 +90,7 @@ ot_szo.sort(key=letrarendez)
 letra_count = 0
 letra_idx = 0
 letra_list = []
-with open("letra.txt", "w") as file:
+with open("letra.txt", "w") as fileKi:
     for i in range(0, len(ot_szo)):
         if ot_szo[letra_idx][1:4] != ot_szo[i][1:4]:
             # új belsejű létraszó, letároljuk az indexét
@@ -96,8 +98,8 @@ with open("letra.txt", "w") as file:
             # ha az eddigi gyűjtésben legalább két szó van, akkor ki kell írni és sort kell emelni
             if len(letra_list) > 1:
                 for letra_szo in letra_list:
-                    file.writelines(letra_szo+"\n")
-                file.writelines("\n")
+                    fileKi.write(letra_szo+"\n")
+                fileKi.write("\n")
                 letra_count +=1
             # törölni kell az eddigi listát
             letra_list = []
