@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2015 Október - Fej vagy írás
+
 import random
 
 dobas = ""
@@ -109,7 +111,7 @@ for i in range(0,1000):
         FFFI += 1
 
 with open("dobasok.txt", "w") as fileKi:
-    fileKi.writelines("FFFF: {}, FFFI: {}\n".format(FFFF,FFFI))
+    fileKi.write("FFFF: {}, FFFI: {}\n".format(FFFF,FFFI))
     for dobas in dobasok:
         fileKi.write(dobas + " ")
 print("Adatok kiírva a 'dobasok.txt' állományba.")
