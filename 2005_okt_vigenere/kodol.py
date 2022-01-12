@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2005 Október - Vigenere
+
 # 1. Kérjen be a felhasználótól egy maximum 255 karakternyi, nem üres szöveget!
 #   A továbbiakban ez a nyílt szöveg.
 print("\n1. feladat")
