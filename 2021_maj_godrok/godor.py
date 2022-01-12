@@ -1,27 +1,26 @@
-### 2021_maj_godor
-print("Gödrök - 2021 májusi emelt szintű informatika érettségi feladat")
+### Emelt Informatika Érettségi - 2021 május - Gödrök
 
-## 1. feladat: Olvassa be és tárolja el a melyseg.txt fájl tartalmát!
+# 1. feladat: Olvassa be és tárolja el a melyseg.txt fájl tartalmát!
 # Írja ki a képernyőre, hogy az adatforrás hány adatot tartalmaz!
 datas = []
 print("1. feladat")
 # olvasásra (r) nyitjuk meg az állományt
-with open("melyseg.txt", "r") as file:
-    lines = file.readlines()
+with open("melyseg.txt", "r") as fileBe:
+    lines = fileBe.readlines()
 for line in lines:
     data = int(line.strip())
     datas.append(data)
 data_count = len(datas)
 print(f"A fájl adatainak száma: {data_count}")
 
-## 2. feladat: Olvasson be egy távolságértéket, majd írja a képernyőre, hogy milyen mélyen van a gödör alja azon a helyen!
+# 2. feladat: Olvasson be egy távolságértéket, majd írja a képernyőre, hogy milyen mélyen van a gödör alja azon a helyen!
 # Ezt a távolságértéket használja majd a 6. feladat megoldása során is!
 print("2. feladat")
 tav = int(input("Adjon meg egy távolságértéket!")) - 1
 melyseg = datas[tav]
 print(f"Ezen a helyen a felszín {melyseg} méter mélyen van.")
 
-## 3. feladat: Határozza meg, hogy a felszín hány százaléka maradt érintetlen és jelenítse meg 2 tizedes
+# 3. feladat: Határozza meg, hogy a felszín hány százaléka maradt érintetlen és jelenítse meg 2 tizedes
 # pontossággal!
 print("3. feladat")
 zeros = 0
@@ -37,26 +36,26 @@ print(f"Az érintetlen terület aránya {arany}%.")
 # arany2 = zeros / data_count
 # print(f"Az érintetlen terület aránya {arany2:4.2%}.")
 
-## 4. feladat: Írja ki a godrok.txt fájlba a gödrök leírását, azaz azokat a számsorokat, amelyek egy-egy gödör méterenkénti mélységét adják meg!
+# 4. feladat: Írja ki a godrok.txt fájlba a gödrök leírását, azaz azokat a számsorokat, amelyek egy-egy gödör méterenkénti mélységét adják meg!
 # Minden gödör leírása külön sorba kerüljön! Az állomány pontosan a gödrök számával egyező számú sort tartalmazzon!
 # írásra (w) nyitjuk meg az állományt
-with open("godrok.txt", "w") as file:
+with open("godrok.txt", "w") as fileKi:
     godor = False
     godor_count = 0
     for data in datas:
         if data != 0:
-            file.write(str(data))
+            fileKi.write(str(data))
             godor = True
         elif godor == True:
-            file.write("\n")
+            fileKi.write("\n")
             godor = False
             godor_count += 1
 
-## 5. feladat: Határozza meg a gödrök számát és írja a képernyőre!
+# 5. feladat: Határozza meg a gödrök számát és írja a képernyőre!
 print("5. feladat")
 print(f"A gödrök száma: {godor_count}")
 
-## 6. feladat: Ha a 2. feladatban beolvasott helyen nincs gödör, akkor „Az adott helyen nincs gödör.” üzenetet jelenítse meg, ha ott gödör található, akkor határozza meg, hogy...
+# 6. feladat: Ha a 2. feladatban beolvasott helyen nincs gödör, akkor „Az adott helyen nincs gödör.” üzenetet jelenítse meg, ha ott gödör található, akkor határozza meg, hogy...
 print("6. feladat")
 # a 'tav' helyen a 'melyseg' érték
 if melyseg == 0:
