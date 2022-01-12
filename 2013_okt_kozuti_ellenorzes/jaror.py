@@ -1,4 +1,4 @@
-# Informatika Emelt Érettségi - 2013 október - Közúti ellenőrzés
+### Informatika Emelt Érettségi - 2013 október - Közúti ellenőrzés
 
 import datetime as dt
 
@@ -39,8 +39,8 @@ jarmuvek = []
 
 # 1. Olvassa be a jarmu.txt állományban talált adatokat, s annak felhasználásával oldja meg a következő feladatokat!
 print("\n1. feladat")
-with open("jarmu.txt", "r") as file:
-    for line in file:
+with open("jarmu.txt", "r") as fileBe:
+    for line in fileBe:
         jarmu = Jarmu(line.strip())
         jarmuvek.append(jarmu)
 print("Adatok beolvasva.")
@@ -111,9 +111,9 @@ print("\n7. feladat")
 act_idx = 0
 # 5 perc másodpercben megadva
 time_diff = 5*60
-with open("vizsgalt.txt", "w") as file:
+with open("vizsgalt.txt", "w") as fileKi:
     for i in range(1, len(jarmuvek)):
         if jarmuvek[i].idomp >= jarmuvek[act_idx].idomp + time_diff:
-            file.writelines(f"{jarmuvek[i].ido.strftime('%H %M %S')} {jarmuvek[i].rendszam}\n")
+            fileKi.write(f"{jarmuvek[i].ido.strftime('%H %M %S')} {jarmuvek[i].rendszam}\n")
             act_idx = i
 print("Vizsgált járművek adatai kiírva a 'vizsgalt.txt' állományba!")
