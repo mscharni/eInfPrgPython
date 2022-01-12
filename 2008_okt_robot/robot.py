@@ -123,7 +123,7 @@ for program in programok:
 print("\n4. feladat")
 with open("ujprog.txt", "w") as fileKi:
     for program in programok:
-        fileKi.writelines(f"{program.program_uj}\n")
+        fileKi.write(f"{program.program_uj}\n")
 print("Adatok kiírva a 'ujprog.txt' állományba")
 
 # 5. Sajnos a tesztek rámutattak arra, hogy a program új verziója még nem tökéletes, ezért vissza kell térni az utasítássorok leírásának régebbi változatához.
