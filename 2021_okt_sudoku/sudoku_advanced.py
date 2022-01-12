@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2021 Október - Sudoku
+
 # tábla osztály létrehozása
 class Table():
     table = []
@@ -64,18 +66,18 @@ col = int(input("Adja meg egy oszlop számát! = "))
 # 2. Az előző feladatban beolvasott névnek megfelelő fájl tartalmát olvassa be, és tárolja el a táblázat adatait!
 # Ha ezt nem tudja megtenni, akkor használja forrásként a rendelkezésre álló állományok egyikét!
 print("\n2. feladat")
-with open(filename) as file:
+with open(filename) as fileBe:
     datas = []
     for i in range(0, 9):
         # egy sor beolvasása
-        line = file.readline()
+        lineBe = file.readline()
         # egy sor feldarabolása
         datas.append(line.split())
     # letárolás a táblázatban
     table.set_table(datas)
 
     # játékos lehetséges kitöltési lépéseinek letárolása
-    for line in file:
+    for line in fileBe:
         steps.append(line.split())
 print("Adatok letárolva")
 
