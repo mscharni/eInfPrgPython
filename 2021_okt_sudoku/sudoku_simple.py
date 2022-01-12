@@ -1,4 +1,6 @@
-# vissazadja, hogy az x,y koordinátájú elem melyik résztáblába tartozik
+### Emelt Informatika Érettségi - 2021 Október - Sudoku
+
+# visszaadja, hogy az x,y koordinátájú elem melyik résztáblába tartozik
 def get_resz(x,y):
     resz = (x // 3)*3 + (y // 3)
     return resz
