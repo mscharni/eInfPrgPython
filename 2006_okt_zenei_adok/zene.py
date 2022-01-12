@@ -143,9 +143,9 @@ for zene in zenek:
 talalt_set = set(talalt_list)
 # kiírjuk állományba
 with open("keres.txt", "w") as fileKi:
-    fileKi.writelines(f"{keres}\n")
+    fileKi.write(f"{keres}\n")
     for talalt in talalt_set:
-        fileKi.writelines(f"{talalt}\n")
+        fileKi.write(f"{talalt}\n")
 print("Adatok kiírva a 'keres.txt' állományba")    
 
 # 6. Az 1. adón változik a műsor szerkezete: minden számot egy rövid, egyperces bevezető előz majd meg, és műsorkezdéstől minden egész órakor 3 perces híreket mondanak.
