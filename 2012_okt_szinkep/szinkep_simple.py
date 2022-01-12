@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2012 Október - Színkép
+
 # 1. Feladat: Olvassa be a fájlból egy megfelelő adatszerkezetbe az egyes képpontok RGB kódját!
 print("\n1. feladat:")
 # üres kép létrehozása
@@ -94,7 +96,7 @@ print("\n6. feladat:")
 with open("keretes.txt", "w") as fileKi:
     for i in range(0, rows):
         for j in range(0, cols):
-            fileKi.writelines(kep[i][j] +"\n")
+            fileKi.write(kep[i][j] +"\n")
 print("Adatok kiírva a 'keretes.txt' állományba")
 
 # 7. Feladat: Az 50×50-es képen a kerettől függetlenül egy sárga RGB (255, 255, 0) színű téglalap van.
