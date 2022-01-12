@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2014 Május - IPv6
+
 class Cim():
     ipv6 = ""
     type = 0
@@ -71,8 +73,8 @@ cimek = []
 
 # 1. Olvassa be az ip.txt állományban talált adatokat, s annak felhasználásával oldja meg a következő feladatokat!
 print("\n1. feladat")
-with open("ip.txt", "r") as file:
-    for line in file:
+with open("ip.txt", "r") as fileBe:
+    for line in fileBe:
         cim = Cim(line)
         cimek.append(cim)
 
@@ -103,10 +105,10 @@ print(f"Helyi egyedi cím: {types[3]} darab")
 # 5. Gyűjtse ki a sok.txt állományba azokat az IP-címeket, melyek legalább 18 nullát tartalmaznak!
 #  A fájlban minden sor elején szerepeljen az eredeti állományból a cím sorszáma!
 #  Ezt kövesse egy szóközzel elválasztva a cím az ip.txt állományban szereplő alakjával!
-with open("sok.txt", "w") as file:
+with open("sok.txt", "w") as fileKi:
     for i in range(0, len(cimek)):
         if cimek[i].ipv6.count("0") >= 18:
-            file.writelines(f"{i+1} {cimek[i].ipv6}\n")
+            fileKi.write(f"{i+1} {cimek[i].ipv6}\n")
 
 #6. Kérjen be a felhasználótól egy sorszámot!
 # Az állományban a megadott sorszámon található IP-címet rövidítse a csoportokon belüli bevezető nullák elhagyásával!
