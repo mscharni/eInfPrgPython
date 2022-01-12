@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2013 Május - Választás
+
 jogosultak = 12345
 valasztokeruletek = 8
 # a pártokat a nevük helyett a listabeli sorszámukkal azonosítjuk be:
@@ -33,8 +35,8 @@ class Jelolt():
 #1. Olvassa be a szavazatok.txt fájl adatait, majd ezek felhasználásával oldja meg a következő feladatokat!
 #   Az adatfájlban legfeljebb 100 képviselőjelölt adatai szerepelnek.
 print("\n1. feladat")
-with open("szavazatok.txt", "r", encoding="utf8") as file:
-    for line in file:
+with open("szavazatok.txt", "r", encoding="utf8") as fileBe:
+    for line in fileBe:
         datas = line.strip().split(" ")
         jelolt = Jelolt(datas)
         jeloltek.append(jelolt)
@@ -117,7 +119,7 @@ for jelolt in jeloltek:
         keruletek[jelolt.kerulet] = jelolt.szavazat
         kepviselok[jelolt.kerulet] = jelolt
 
-with open("kepviselok.txt", "w", encoding="utf8") as file:
+with open("kepviselok.txt", "w", encoding="utf8") as fileKi:
     for i in range(1,9):
-        file.writelines(f"{i} {kepviselok[i].nev} {kepviselok[i].partnev}\n")
+        fileKi.write(f"{i} {kepviselok[i].nev} {kepviselok[i].partnev}\n")
 print("Adatok kiírva a 'kepviselok.txt' file-ba")
