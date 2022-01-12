@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2019 Május - Céges autók
+
 class Adat :
     def __init__(self, s):
         self.nap = int(s[0])
@@ -119,7 +121,7 @@ with open(rszBe + "_menetlevel.txt","w") as fileKi:
             else:
                 lastKi = False
                 autoBe = adat
-                fileKi.writelines("{}\t{}.\t{}\t{} km\t{}.\t{}\t{} km\n".format(autoKi.dolgozo, autoKi.nap, autoKi.oraPerc, autoKi.km, autoBe.nap, autoBe.oraPerc, autoBe.km))
+                fileKi.write("{}\t{}.\t{}\t{} km\t{}.\t{}\t{} km\n".format(autoKi.dolgozo, autoKi.nap, autoKi.oraPerc, autoKi.km, autoBe.nap, autoBe.oraPerc, autoBe.km))
     if (lastKi):
-        fileKi.writelines("{}\t{}.\t{}\t{} km\n".format(autoKi.dolgozo, autoKi.nap, autoKi.oraPerc, autoKi.km))
+        fileKi.write("{}\t{}.\t{}\t{} km\n".format(autoKi.dolgozo, autoKi.nap, autoKi.oraPerc, autoKi.km))
 print("Menetlevél kész.")
