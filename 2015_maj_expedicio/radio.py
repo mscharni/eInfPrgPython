@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2015 Május - Expedíció
+
 class Vetel:
     nap = 0         # vétel napja
     vevo = 0        # vevő kódja
@@ -71,8 +73,8 @@ with open("adaas.txt", "w") as fileKi:
                     hszoveg[i] = szoveg[i]
 
         uzenet.hszoveg = "".join(hszoveg)
-        fileKi.writelines(uzenet.hszoveg)
-        fileKi.writelines("\n")
+        fileKi.write(uzenet.hszoveg)
+        fileKi.write("\n")
 print("Adatok kiírva a 'adaas.txt' állományba")
 
 # 6. feladat: Készítsen függvényt szame néven az alábbi algoritmus alapján!
