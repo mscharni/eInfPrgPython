@@ -124,5 +124,5 @@ for termek in kosarak[beSzam-1].termekek:
 print("\n8. feladat")
 with open("osszeg.txt", "w") as fileKi:
     for kosar in kosarak:
-        fileKi.write("{}: {}\n".format(kosar.sorszam, kosar.osszAr))
+        fileKi.write(f"{kosar.sorszam}: {kosar.osszAr}\n")
 print("Adatok kiírva az 'osszeg.txt' állományba")
