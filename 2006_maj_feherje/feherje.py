@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2006 május - Fehérje
+
 class Feherje():
     def __init__(self, datas):
         self.rov = datas[0].strip()
