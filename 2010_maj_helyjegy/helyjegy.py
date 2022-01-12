@@ -1,3 +1,4 @@
+### Emelt Informatika Érettségi - 2010 Május - Helyjegy
 class Jegy():
     def __init__(self, idx, line):
         global ossz_bevetel
