@@ -77,6 +77,6 @@ print(f"{rovidb} rövid szó található a szótárban!")
 print("\n6. feladat")
 with open("kodok.txt", "w") as fileKi:
     for szo in szavak:
-        fileKi.writelines(kodol(szo))
-        fileKi.writelines("\n")
+        fileKi.write(kodol(szo))
+        fileKi.write("\n")
 print("Adatok kiírva a 'kodok.txt' állományba.")
