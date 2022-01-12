@@ -1,11 +1,13 @@
+### Emelt Informatika Érettségi - 2019 Május - Céges autók
+
 #print('1.feladat')
 adatok=[]
 autok = [] # külön lista a 10 céges autó adatainak, amely elemei listák (az adott autó sorAdatai)
 for k in range(0,10):
     autok.append([])
 
-with open("autok.txt") as file:
-    for sor in file:
+with open("autok.txt") as fileBe:
+    for sor in fileBe:
         sorAdat = sor.strip().split(" ")
         # a 0, 1 értékeket lecseréljük "ki", "be" értékekre a könnyebb kezelhetőség kedvéért
         if(sorAdat[5] == "0"):
@@ -79,12 +81,13 @@ kiKm = ""
 
 for auto in autok[ri]:
     if auto["ki"] == "be":
-        fileKi.writelines("{}\t{}.\t{}\t{} km\t{}.\t{}\t{} km\n".format(auto["dol"], kiNap, kiIdo, kiKm, auto["nap"], auto["ido"], auto["km"])) 
+        fileKi.write("{}\t{}.\t{}\t{} km\t{}.\t{}\t{} km\n".format(auto["dol"], kiNap, kiIdo, kiKm, auto["nap"], auto["ido"], auto["km"])) 
     else:
         kiNap = auto["nap"]
         kiIdo = auto["ido"]
         kiKm = auto["km"]
 # ha utoljára kiment, azt is ki kell írni
 if auto["ki"] == "ki":
-    fileKi.writelines("{}\t{}.\t{}\t{} km\n".format(auto["dol"], auto["nap"], auto["ido"], auto["km"])) 
+    fileKi.write("{}\t{}.\t{}\t{} km\n".format(auto["dol"], auto["nap"], auto["ido"], auto["km"])) 
 print("Menetlevél kész.")
+fileKi.close()
