@@ -1,3 +1,5 @@
+### Emelt Informatika Érettségi - 2017 Május - Tesztverseny
+
 class Versenyzo :
     azon = ""
     tippek = ""
@@ -76,7 +78,7 @@ with open("pontok.txt", "w") as fileKi:
             if versenyzo.tippek[i] == megoldasok[i]:
                     osszPont += ertek[i]
         versenyzo.osszpont = osszPont
-        fileKi.writelines(f"{versenyzo.azon} {osszPont}\n")
+        fileKi.write(f"{versenyzo.azon} {osszPont}\n")
 # (B verzió) Sok elágazással
 # with open("pontok.txt", "w") as fileKi:
 #     for versenyzo in versenyzok:
@@ -92,7 +94,7 @@ with open("pontok.txt", "w") as fileKi:
 #                 else:
 #                     osszPont += 6
 #         versenyzo.osszpont = osszPont
-#         fileKi.writelines(f"{versenyzo.azon} {osszPont}\n")
+#         fileKi.write(f"{versenyzo.azon} {osszPont}\n")
 
 # 7. feladat: A versenyen a három legmagasabb pontszámot elérő összes versenyzőt díjazzák.
 #   Például 5 indulónál előfordulhat, hogy 3 első és 2 második díjat adnak ki.
