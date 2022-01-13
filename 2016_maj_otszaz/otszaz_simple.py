@@ -102,7 +102,7 @@ for termek in kosar:
 
 # 8. feladat: Készítse el az osszeg.txt fájlt, amelybe soronként az egy-egy vásárlás alkalmával fizetendő összeg kerüljön a kimeneti mintának megfelelően!
 print("\n8. feladat")
-with open("osszeg2.txt", "w") as fileKi:
+with open("osszeg_simple.txt", "w") as fileKi:
     for kosar in kosarak:
         fileKi.write(f"{kosar['_sorszam']}: {kosar['_ossz_ar']}\n")
-print("Adatok kiírva az 'osszeg2.txt' állományba")
+print("Adatok kiírva az 'osszeg_simple.txt' állományba")

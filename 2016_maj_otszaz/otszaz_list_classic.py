@@ -16,8 +16,8 @@ kosarak=[]
 # 1. feladat: Olvassa be és tárolja el a penztar.txt fájl tartalmát!
 print("\n1. feladat")
 sorszam = 0
-kosar = [["F",0]]  # kezdetben üres a kosár, de belerakunk két fiktív terméket (a kosár végére végére), hogy a keresés funkció működjön
-# egy termék ['termék neve', darab] formában kerüla  kosárba
+kosar = [[],[]]  # kezdetben üres a kosár, két üres listát tartalmaz, az első a termékek nevét, a második az adott termék darabszámát tartalmazza
+# egy termék [termék neve] és [darab] formában kerüla  kosárba
 with open("penztar.txt", "r") as fileBe:
     for sor in fileBe:
         termek = sor.strip()
@@ -25,32 +25,30 @@ with open("penztar.txt", "r") as fileBe:
             # letároljuk a kész kosarak között
             kosarak.append(kosar)
             # új kosarat nyitunk (kiürítjuk a péntárosnál lévő kosarat)
-            kosar = [["F",0]]
+            kosar = [[],[]]
         else:
-            # megnézzük, hogy van-e már a kosárban ilyen termék
-            i = 0
-            while kosar[i][0] != termek and kosar[i][0] != "F":
-                i += 1
-            # ha nincs a kosárban ilyen termék, akkor belerakjuk
-            if kosar[i][0] == "F":
-                kosar.insert(0,[termek, 1])
-            else:
-                # van, tehát növeljük a darabszámot
-                kosar[i][1] +=1  
+            # megpróbáljuk megnövelni a termék kosárbeli sorszámának megfelelő darabszámot
+            try:
+                # ha van ilyen termék, akkor sikerül
+                kosar[1][kosar[0].index(termek)] +=1  
+            except ValueError:
+                # ha nem sikerül, akkor a kosár végéhez fűzzük a termék nevét és darabszámát
+                kosar[0].append(termek)
+                kosar[1].append(1)
 
 print("Az adatok beolvasva a 'penztar.txt' állományból.")
-
+print(kosarak)
 # 2. feladat: Határozza meg, hogy hányszor fizettek a pénztárnál!
 print("\n2. feladat")
-# a kifizetések száma ugyanannyi, mint a kosarak száma 
+# a kifizetések száma ugyanayyi, mint a kosarak száma 
 print(f"A kifizetések száma: {len(kosarak)}")
 
 # 3. feladat: Írja a képernyőre, hogy az első vásárlónak hány darab árucikk volt a kosarában!
 print("\n3. feladat")
 # az első korás a nulladik, végigmegyünk az összes trméken és összeadjuk a darabszámokat
 db = 0
-for termek in kosarak[0]:
-    db += termek[1]
+for darab in kosarak[0][1]:
+    db += darab
 print(f"Az első vásárló {db} darab árucikket vásárolt.")
 
 # 4. feladat: Kérje be a felhasználótól egy vásárlás sorszámát, egy árucikk nevét és egy darabszámot!
@@ -69,12 +67,8 @@ utso = -1
 hanyszor = 0
 idx = 0
 for kosar in kosarak:
-    # megkeressük, hogy van-e a kosárban az adott termékből
-    i = 0
-    while kosar[i][0] != termek and kosar[i][0] != "F":
-        i += 1
     # ha van már a kosárban ilyen termék, akkor növeljük a darabszámát
-    if kosar[i][0] != "F":
+    if kosar[0].count(termek) != 0:
         hanyszor +=1
         # elsőként?
         if elso == -1:
@@ -96,20 +90,18 @@ print(f"{db} darab vételekor fizetendő: {ertek(db)}")
 print("\n7. feladat")
 # a kosarak indexe eggyel kisebb, mind a kosarak sorszáma
 kosar = kosarak[sorszam-1]
-for termek in kosar:
-    # csak a termékeket kell kiírni
-    if termek[0] != "F": 
-        print(f"{termek[0]} {termek[1]}")
+for i in range(0, len(kosar[0])):
+     print(f"{kosar[0][i]} {kosar[1][i]}")
 
 # 8. feladat: Készítse el az osszeg.txt fájlt, amelybe soronként az egy-egy vásárlás alkalmával fizetendő összeg kerüljön a kimeneti mintának megfelelően!
 print("\n8. feladat")
-with open("osszeg_list.txt", "w") as fileKi:
+with open("osszeg_list_classic.txt", "w") as fileKi:
     idx = 1
     for kosar in kosarak:
         # kosárbeli termékek összes ára
-        osszar = -500  # a "F" fiktív termékért nem fizetünk
-        for termek in kosar:
-            osszar += ertek(termek[1])
+        osszar = 0
+        for darab in kosar[1]:
+            osszar += ertek(darab)
         fileKi.write(f"{idx}: {osszar}\n")
         idx +=1
-print("Adatok kiírva az 'osszeg_list.txt' állományba")
+print("Adatok kiírva az 'osszeg_list_classic.txt' állományba")
