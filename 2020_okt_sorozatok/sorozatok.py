@@ -138,8 +138,10 @@ with open(fileName, 'w') as fileKi:
             lastSum += epizod['hossz']
             lastCount +=1
         else:
-            fileKi.write("{0} {1} {2}\n".format(lastCim, lastSum, lastCount))
-            lastCim = epizod['cim']
+            fileKi.write(f"{lastCim} {lastSum} {lastCount}\n")
             lastSum = epizod['hossz']
             lastCount = 1
+            lastCim = epizod['cim']
+    # az utolsó sorozat kiiratása
+    fileKi.write(f"{lastCim} {lastSum} {lastCount}\n")
 print(f"Adatok kiírva a '{fileName}' állományba!")
