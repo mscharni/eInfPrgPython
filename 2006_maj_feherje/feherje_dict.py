@@ -1,16 +1,5 @@
 ### Emelt Informatika Érettségi - 2006 május - Fehérje
 
-class Feherje():
-    def __init__(self, datas):
-        self.rov = datas[0].strip()
-        self.betu = datas[1].strip()
-        self.C = int(datas[2].strip())
-        self.H = int(datas[3].strip())
-        self.O = int(datas[4].strip())
-        self.N = int(datas[5].strip())
-        self.S = int(datas[6].strip())
-        self.moltom = self.C *12 + self.H + self.O*16 + self.N*14 + self.S*32
-
 # fehérjéket tartalmazó lista
 feherjek = []
 # fehérjéket tartalmazó szótár: kulcs a fehérje betűjele, értéke a fehérje objektum
@@ -22,26 +11,30 @@ f_dict = {}
 print("\n1. feladat")
 with open("aminosav.txt", "r") as fileBe:
     lines = fileBe.readlines()
-# beolvasott adatok (sortöréssel)
-# ['Gly', 'G', '2', '5', '2', '1', '0', 'Ala', 'A', '3', '7', '2', '1', '0', ...]
-# hét egymást követő sor egy fehérje adatait tartalmazza, amely fehérje-listákból egy adatlistát képzünk:
-# eredmény (sortöréssel)
-# ['Gly', 'G', '2', '5', '2', '1', '0'], ['Ala', 'A', '3', '7', '2', '1', '0'],...]
-datalines = [lines[line:line+7] for line in range(0,len(lines),7)]
-for datas in datalines:
-    # objektumban tároljuk el egy-egy fehérje adatait
-    feherje = Feherje(datas)
+# hetesével végigmegyünk az adatokon és letároljuk a fehérjék összetartozó adatait egy szótárban
+for i in range(0, len(lines), 7):
+    # szótárban tároljuk el egy-egy fehérje adatait
+    feherje = {
+        'rov' : lines[i+0].strip(),
+        'betu' : lines[i+1].strip(),
+        'C' : int(lines[i+2].strip()),
+        'H' : int(lines[i+3].strip()),
+        'O' : int(lines[i+4].strip()),
+        'N' : int(lines[i+5].strip()),
+        'S' : int(lines[i+6].strip()),
+    }
+    feherje['moltom'] = feherje['C'] *12 + feherje['H'] + feherje['O']*16 + feherje['N']*14 + feherje['S']*32
     # amelyet egy listába szervezünk
     feherjek.append(feherje)
     # valamint letároljuk egy szótárban, ahol a kulcs a fehérje azonosítója, az érték pedig maga a fehérje objektuma
-    f_dict[feherje.betu] = feherje
+    f_dict[feherje['betu']] = feherje
 print("Adatok beolvasva az 'aminosavak.txt' állományból")
 
 
 # 2. Határozza meg az aminosavak relatív molekulatömegét, ha a szén atomtömege 12, a hidrogéné 1, az oxigéné 16, a nitrogéné 14 és a kén atomtömege 32!
 # Például a Glicin esetén a relatív molekulatömeg 2·12 + 5·1 + 2·16 + 1·14 + 0·32 = 75.
 print("\n2. feladat")
-print("A 'Feherje' osztály objektum-inicializációs részében")
+print("A 'feherje' szótár létrehozása során")
 
 
 # 3. Rendezze növekvő sorrendbe az aminosavakat a relatív molekulatömeg szerint!
@@ -50,13 +43,13 @@ print("A 'Feherje' osztály objektum-inicializációs részében")
 print("\n3. feladat")
 # a molekulatömeg szerinti rendezéshez szükséges egyedi rendezőfüggvény
 def sort_by_moltom(feherje):
-    return feherje.moltom
+    return feherje['moltom']
 # fehérjéket tartalmazó lista rendezése (molekulatömeg szerint)
 feherjek.sort(key = sort_by_moltom)
-with open("eredmeny.txt", "w") as fileKi:
+with open("eredmeny_dict.txt", "w") as fileKi:
     for feherje in feherjek:
-        fileKi.write(f"{feherje.rov} {feherje.moltom}\n")
-print("Adatok kiírva az 'eredmeny.txt' állományba.")
+        fileKi.write(f"{feherje['rov']} {feherje['moltom']}\n")
+print("Adatok kiírva az 'eredmeny_dict.txt' állományba.")
 
 
 # 4. A bsa.txt a BSA nevű fehérje aminosav sorrendjét tartalmazza – egybetűs jelöléssel.
@@ -66,30 +59,37 @@ print("Adatok kiírva az 'eredmeny.txt' állományba.")
 #   Az összegképletet a képernyőre és az eredmeny.txt fájlba az alábbi formában írja ki:
 #   Például: C 16321 H 34324 O 4234 N 8210 S 2231
 print("\n4. feladat")
-# bsa üres fehérje létrehozása kétféle módon
-# bsa = Feherje("bsa - 0 0 0 0 0".split(" "))
-bsa = Feherje(['bsa', '-', '0', '0', '0', '0', '0'])
+# bsa üres fehérje létrehozása, amelyet feltöltünk a résztvevő fehérjék adatai alapján 
+bsa = {
+    'rov' : 'bsa',
+    'betu' : '-',
+    'C' : 0,
+    'H' : 0,
+    'O' : 0,
+    'N' : 0,
+    'S' : 0,
+}
 
-bsa_seq = ""
+bsa_seq = ""  # 5. feladathoz
 with open("bsa.txt", "r") as fileBe:
     for f in fileBe:
         f_kod = f.strip()
         bsa_seq += f_kod    # 5. feladathoz
         feherje = f_dict[f_kod] 
-        bsa.C += feherje.C
-        bsa.H += feherje.H - 2 # H2O kilépés miatt
-        bsa.O += feherje.O - 1 # H2O kilépés miatt
-        bsa.N += feherje.N
-        bsa.S += feherje.S
+        bsa['C'] += feherje['C']
+        bsa['H'] += feherje['H'] - 2 # H2O kilépés miatt
+        bsa['O'] += feherje['O'] - 1 # H2O kilépés miatt
+        bsa['N'] += feherje['N']
+        bsa['S'] += feherje['S']
     # eggyel több H2O-t vontunk ki
-    bsa.H += 2 
-    bsa.O += 1 
-print(f"C {bsa.C} H {bsa.H} O {bsa.O} N {bsa.N} S {bsa.S}")
+    bsa['H'] += 2 
+    bsa['O'] += 1 
+print(f"C {bsa['C']} H {bsa['H']} O {bsa['O']} N {bsa['N']} S {bsa['S']}")
 
 # hozzáfűzésre nyitjuk meg a kimeneti állományt
-with open("eredmeny.txt", "a") as fileKi:
-    fileKi.write(f"C {bsa.C} H {bsa.H} O {bsa.O} N {bsa.N} S {bsa.S}\n")
-print("Adatok kiírva az 'eredmeny.txt' állományba.")
+with open("eredmeny_dict.txt", "a") as fileKi:
+    fileKi.write(f"C {bsa['C']} H {bsa['H']} O {bsa['O']} N {bsa['N']} S {bsa['S']}\n")
+print("Adatok hozzáírva az 'eredmeny_dict.txt' állományhoz.")
 
 
 # 5. A fehérjék szekvencia szerkezetét hasításos eljárással határozzák meg.

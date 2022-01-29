@@ -1,0 +1,21 @@
+Gly 75
+Ala 89
+Ser 105
+Pro 115
+Val 117
+Thr 119
+Cys 121
+Leu 131
+Ile 131
+Asn 132
+Asp 133
+Gln 146
+Lys 146
+Glu 147
+Met 149
+His 155
+Phe 165
+Arg 174
+Tyr 181
+Trp 204
+C 2923 H 4594 O 895 N 778 S 39
