@@ -25,7 +25,9 @@ Példa az időzítés és a felirat fogalmakra:
 	A példában a felirat a videó lejátszásakor az első másodpercnél jelenik meg (00:01), a harmadik másodpercben tűnik el (00:03), és a megjelenített felirat szövege a _„So phase two - tank creation.”_
 
 3. Készítse el az osztály konstruktorát, ami a következő feladatokat hajtja végre!
+
 	a. Beállítja az időzítést tároló adattag értékét a konstruktor paraméterében megadott értékkel.
+	
 	b. Beállítja a felirat szövegét tároló adattag értékét a konstruktor paraméterében megadott értékkel.
 
 4. Olvassa be a feliratok.txt állomány sorait és hozzon létre osztálypéldányt (objektumot) minden egyes időzítés−felirat párhoz! 
