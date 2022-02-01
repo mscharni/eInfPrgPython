@@ -55,7 +55,31 @@ class Tabla:
             return False
         return True
 
-
+    # 8. feladat: Készítsen a Tabla osztályban logikai értékkel visszatérő metódust, ami meghatározza egy megadott játékos lépéséről, hogy szabályos lépés vagy nem szabályos lépés!
+    def SzabalyosE(self, jatekos, sor, oszlop):
+        if self.t[sor][oszlop] == "#":
+            if self.VanForditas(jatekos, sor, oszlop, -1, -1):
+                return True
+            elif self.VanForditas(jatekos, sor, oszlop, -1, 0):
+                return True
+            elif self.VanForditas(jatekos, sor, oszlop, -1, 1):
+                return True
+            elif self.VanForditas(jatekos, sor, oszlop, 0, -1):
+                return True
+            elif self.VanForditas(jatekos, sor, oszlop, 0, 1):
+                return True
+            elif self.VanForditas(jatekos, sor, oszlop, 1, -1):
+                return True
+            elif self.VanForditas(jatekos, sor, oszlop, 1, 0):
+                return True
+            elif self.VanForditas(jatekos, sor, oszlop, 1, 1):
+                return True
+            else:
+                return False
+        else:
+            szabalyos = False
+    
+    
 # 4. feladat: Hozzon létre egy Tabla típusú osztálypéldányt (objektumot), melynek a konstruktora az allas.txt forrásállomány nevét kapja aktuális paraméterként feldolgozásra!
 myt = Tabla("allas.txt")
 
@@ -69,3 +93,30 @@ print("\n6. feladat: Összegzés")
 print(f"Kék korongok száma: {myt.Megszamlal('K')}")
 print(f"Fehér korongok száma: {myt.Megszamlal('F')}")
 print(f"Üres mezők száma: {myt.Megszamlal('#')}")
+
+
+# 8. Feladat: A VanForditas() metódus hívásával határozza meg a minta szerint, hogy a megadott üres cellába korongot („F” vagy „K”) elhelyezve a megadott irányba történik-e fordítás!
+#    A metódus aktuális paramétereit egy karakterlánc típusú változóban (vagy konstansban) rögzítse programjában, az értékeket pontosvesszővel válassza el a következő sorrendben:
+#    jatekos;sor;oszlop;iranySor;iranyOszlop
+#    például:”F;4;1;0;1”
+#    Az iranySor;iranyOszlop paraméterek a következők szerint határozzák meg a feltételezett fordítás irányát:
+#    fent-bal  (-1; -1)  fent-közép  (-1; 0)  fent-jobb  (-1; 1)
+#    közép-bal ( 0; -1)  közép-közép ( 0; 0)  közép-jobb ( 0; 1)
+#    lent-bal  ( 1; -1)  lent-közép  ( 1; 0)  lent-jobb  ( 1; 1)
+be = input("\n8. feladat: [jatekos;sor;oszlop;iranySor;iranyOszlop] = ").split(";")
+if myt.VanForditas(be[0], int(be[1]), int(be[2]), int(be[3]), int(be[4])):
+    print("Van fordítás!")
+else:
+    print("Nincs fordítás!")
+    
+# 9. feladat: Készítsen a Tabla osztályban logikai értékkel visszatérő metódust, ami meghatározza egy megadott játékos lépéséről, hogy szabályos lépés vagy nem szabályos lépés!
+#    Szabályosnak tekintünk egy lépést, ha a megadott cella üres, és a nyolc irány valamelyikéből (lásd előző feladat) a megadott játékossal történhet fordítás.
+#    Megoldásában felhasználhatja a korábban elkészített metódust is.
+#    A metódus aktuális paramétereit egy karakterlánc típusú változóban (vagy konstansban) rögzítse programjában, az értékeket pontosvesszővel válassza el a következő sorrendben:
+#    jatekos;sor;oszlop
+#    például:”K;1;3”
+be = input("\n8. feladat: [jatekos;sor;oszlop] = ").split(";")
+if myt.SzabalyosE(be[0], int(be[1]), int(be[2])):
+    print("Szabályos lépés!")
+else:
+    print("Nem szabályos lépés!")
