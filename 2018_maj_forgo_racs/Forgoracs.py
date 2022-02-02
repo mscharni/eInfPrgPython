@@ -1,3 +1,4 @@
+### Emelt Informatika Alapismeretek Érettségi - 2018 május - Forgórács
 # 1. feladat: Készítsen programot a következő feladatok megoldására, amelynek a forráskódját Forgoracs néven mentse el!
 
 # 2. feladat: Hozzon létre saját osztályt Fracs azonosítóval és definiáljon benne két karakter típusú mátrixot (kétdimenziós tömböt) Kodlemez és Titkositott azonosítóval,
