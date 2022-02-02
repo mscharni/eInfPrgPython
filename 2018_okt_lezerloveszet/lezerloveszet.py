@@ -63,14 +63,14 @@ for loves in lovesek:
         nulla_pontos += 1
 print(f"\n9. feladat: Nulla pontos lövések száma: {nulla_pontos} db")
 
-# 10. Számolja meg és írja ki a képernyőre a játékban részvevő játékosok számát a minta szerint!
+# 10. Feladat: Számolja meg és írja ki a képernyőre a játékban részvevő játékosok számát a minta szerint!
 jatekosok = []
 for loves in lovesek:
     if loves.Jatekos not in jatekosok:
         jatekosok.append(loves.Jatekos)
 print(f"\n10. feladat: Játékosok száma: {len(jatekosok)}")
 
-# 11. Határozza meg játékosonként a leadott lövések számát! Megoldását úgy készítse el, hogy a játékosok nevei és száma nem ismert, de feltételezheti, hogy a számuk 2 és 10 fő közötti!
+# 11. Feladat: Határozza meg játékosonként a leadott lövések számát! Megoldását úgy készítse el, hogy a játékosok nevei és száma nem ismert, de feltételezheti, hogy a számuk 2 és 10 fő közötti!
 jatekos_lovesek = [0 for i in range(0, len(jatekosok))]
 for loves in lovesek:
     idx = jatekosok.index(loves.Jatekos)
@@ -78,3 +78,20 @@ for loves in lovesek:
 print("\n11. feladat: Lövések száma")
 for i in range(0, len(jatekosok)):
     print(f"{jatekosok[i]} - {jatekos_lovesek[i]} db")
+
+# 12. Feladat: Számítsa ki az átlagpontszámokat, majd jelenítse meg a minta szerint!
+jatekos_pontok = [0 for i in range(0, len(jatekosok))]
+for loves in lovesek:
+    idx = jatekosok.index(loves.Jatekos)
+    jatekos_pontok[idx] += loves.Pontszam
+print("\n12. feladat: Átéagpontszámok")
+for i in range(0, len(jatekosok)):
+    print(f"{jatekosok[i]} - {jatekos_pontok[i] / jatekos_lovesek[i]}")
+
+
+# 13. Feladat: Határozza meg a legmagasabb átlagpontszám alapján a nyertes játékos nevét! Feltételezheti, hogy nem alakult ki holtverseny.
+maxi = 0
+for i in range(1, len(jatekosok)):
+    if jatekos_pontok[maxi] / jatekos_lovesek[maxi] < jatekos_pontok[i] / jatekos_lovesek[i]:
+        maxi = i
+print(f"\n13. feladat: A játék nyertese: {jatekosok[maxi]}")
