@@ -8,6 +8,6 @@
 ## Feladat
 
 
-## Minta a szöveges kimenetek kialakításhoz
+### Minta a szöveges kimenetek kialakításhoz
 ```
 ```
