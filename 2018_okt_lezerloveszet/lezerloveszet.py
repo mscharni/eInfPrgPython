@@ -30,7 +30,7 @@ class JatekosLovese:
     #    A pontszámot a 10 - Tavolsag képlettel határozza meg! A pontszámot két tizedesjegyre kell a kódtagnak kerekítenie!
     #    Negatív pontszám nem lehet, ilyenkor a kódtag nulla értékkel térjen vissza!
     def getPontszam(self):
-        return 10 - self.Tavolsag if self.Tavolsag < 10 else 0
+        return int(100*(10 - self.Tavolsag))/100 if self.Tavolsag < 10 else 0
         
     
 # 4. feladat: Olvassa be a lovesek.txt állományban található adatokat és tárolja el őket!
@@ -84,7 +84,7 @@ jatekos_pontok = [0 for i in range(0, len(jatekosok))]
 for loves in lovesek:
     idx = jatekosok.index(loves.Jatekos)
     jatekos_pontok[idx] += loves.Pontszam
-print("\n12. feladat: Átéagpontszámok")
+print("\n12. feladat: Átlagpontszámok")
 for i in range(0, len(jatekosok)):
     print(f"{jatekosok[i]} - {jatekos_pontok[i] / jatekos_lovesek[i]}")
 
