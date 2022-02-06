@@ -29,4 +29,4 @@ Minden almappa a következőket tartalmazza:
 4. Minden részfeladatot teszteljen le, ehhez segítségül használhatja a `replit` linkek közül a **Megoldás** verziót, amelyet lefuttatva megkapja az adott részfeladat ereményét, valamint a program által generált kimeneti állományokat.
 
 **Ereményes gyakorlást, felkészülést az érettségire!**
-[^1]: Emelt szintű informatika érettségi vizsgatárgyhoz a 2022. év vizsgaidőszakaira érvényes szoftverek listája
+[^1]: [Emelt szintű informatika érettségi vizsgatárgyhoz a 2022. év vizsgaidőszakaira érvényes szoftverek listája](https://www.oktatas.hu/bin/content/dload/erettsegi/nyilvanos_anyagok_2022tavasz/info_emelt_szoftverlista_2022maj.pdf)
