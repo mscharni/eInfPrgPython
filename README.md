@@ -20,7 +20,7 @@ Minden almappa a következőket tartalmazza:
 1. [PyCharm](https://www.jetbrains.com/pycharm/) {PyCharm Community 2021.2 with Python 3.9.6 [^1]}
 2. [Thonny](https://thonny.org/) {nem használható érettségin, de egyszerű, letisztult a felülete, kis gépigényű}
 3. [IDLE](https://docs.python.org/3/library/idle.html) {Python 3.9.6 + IDLE (Python GUI) [^1]}
-4. [Visual Studio Code]() {nem használható érettségin, de, ha valaki többféle nyelvet akar használni, praktikus}
+4. [Visual Studio Code](https://code.visualstudio.com/) {nem használható érettségin, de, ha valaki többféle nyelvet használ, praktikus}
 
 ## Javasolt megoldási menet:
 1. Olvassa el a feladatot (.md)
