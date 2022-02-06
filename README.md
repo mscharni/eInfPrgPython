@@ -11,7 +11,7 @@ Minden almappa a következőket tartalmazza:
 3. A feladathoz szükséges bemeneti adatállományok (`.txt`) 
 4. A feladat szerint előírt kimeneti állományok (`.txt`)
 
-## Javasolt online fejlesztői környezet - ReplIt
+## Javasolt online fejlesztői környezet - [ReplIt](https://replit.com/)
 1. Nyissa meg a **markdown** állományban található `replit` linkek közül a **Megoldás váz** (_starter_) verziót.
 2. Készítsen másolatot a saját accountjával (**Fork repl**) 
 3. Készítse el a feladat megoldását :-)
