@@ -17,9 +17,10 @@ Minden almappa a következőket tartalmazza:
 3. Készítse el a feladat megoldását :-)
 
 ## Javasolt fejlesztői környezetek 
-1. [PyCharm](https://www.jetbrains.com/pycharm/)
-2. [Thonny](https://thonny.org/)
-3. [IDLE](https://docs.python.org/3/library/idle.html)
+1. [PyCharm](https://www.jetbrains.com/pycharm/) {PyCharm Community 2021.2 with Python 3.9.6 [^1]}
+2. [Thonny](https://thonny.org/) {nem használható érettségin, de egyszerű, letisztult a felülete, kis gépigényű}
+3. [IDLE](https://docs.python.org/3/library/idle.html) {Python 3.9.6 + IDLE (Python GUI) [^1]}
+4. [Visual Studio Code]() {nem használható érettségin, de, ha valaki többféle nyelvet akar használni, praktikus}
 
 ## Javasolt megoldási menet:
 1. Olvassa el a feladatot (.md)
@@ -28,3 +29,4 @@ Minden almappa a következőket tartalmazza:
 4. Minden részfeladatot teszteljen le, ehhez segítségül használhatja a `replit` linkek közül a **Megoldás** verziót, amelyet lefuttatva megkapja az adott részfeladat ereményét, valamint a program által generált kimeneti állományokat.
 
 **Ereményes gyakorlást, felkészülést az érettségire!**
+[^1]: Emelt szintű informatika érettségi vizsgatárgyhoz a 2022. év vizsgaidőszakaira érvényes szoftverek listája
