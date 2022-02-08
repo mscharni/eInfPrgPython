@@ -49,10 +49,10 @@ file = open("adaas.txt", "w")
 for nap in range (11):
     uzi = [['' for i in range(90)] for j in range(12)]
     for uzenet in uzenetek:
-        if uzenet["nap"] == nap+1:
+        if uzenet['nap'] == nap+1:
             for c in range(90):
-                betu = uzenet["msg"][c]
-                if betu != "#" :
+                betu = uzenet['msg'][c]
+                if betu != '#' :
                     uzi[nap][c] = betu
     file.write("".join(uzi[nap]))
     file.write("\n") # sortörés
@@ -64,10 +64,41 @@ file.close() # bezérja a file-t
 #   A függvény egy karaktersorozathoz hozzárendeli az igaz vagy a hamis értéket.
 #   A függvény elkészítésekor az algoritmusban megadott változóneveket használja!
 print("\n6. feladat:")
+def szame(szo):
+    valasz = True
+    for i in range(0, len(szo)):     # nullától indul a szó karaktereinek indexelése
+        if szo[i] < '0' or szo[i]> '9':
+            valasz = False
+    return valasz
+
 
 # 7. feladat: Olvassa be egy nap és egy rádióamatőr sorszámát, majd írja a képernyőre a megfigyelt egyedek számát (a kifejlett és kölyök egyedek számának összegét)!
 #   Ha nem volt ilyen feljegyzés, a „Nincs ilyen feljegyzés” szöveget jelenítse meg!
 #   Ha nem volt megfigyelt  egyed vagy számuk nem állapítható meg, a „Nincs információ” szöveget jelenítse meg!
 #   Amennyiben egy számot közvetlenül # jel követ, akkor a számot tekintse nem megállapíthatónak!
 print("\n7. feladat:")
-
+nap = int(input("Adja meg a nap sorszámát! "))
+ado = int(input("Adja meg a rádióamatőr sorszámát! "))
+db = 0
+vane = False
+joe = False
+for uzenet in uzenetek:
+    if uzenet['nap'] == nap and uzenet['ado'] == ado:
+        vane = True
+        # a szövege elején az első szóközig terjedő részben vannak az egyedszámok 
+        eleje = uzenet['msg'].split(' ')[0]
+        # a két számot "/" -jel választja el egyástól (ha van benne)
+        szamok = eleje.split('/')
+        if len(szamok) == 2:
+            if szame(szamok[0]) and szame(szamok[1]):
+                db += int(szamok[0])
+                db += int(szamok[1])
+                joe = True
+        break
+if vane:
+    if joe:
+        print(f"A megfigyelt egyedek száma: {db}")
+    else:
+        print("Nincs információ")
+else:
+    print("Nincs ilyen feljegyzés")
