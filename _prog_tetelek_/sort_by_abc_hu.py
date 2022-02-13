@@ -49,13 +49,16 @@ def szo_rel(a,b):
         ci = 0
         while ci <szo_hossz  and betu_rel(a_betuk[ci]) == betu_rel(b_betuk[ci]):
             ci += 1
-        return betu_rel(a_betuk[ci]) < betu_rel(b_betuk[ci])
+        if ci == szo_hossz:
+            return len(a_betuk) < len(b_betuk)
+        else:
+            return betu_rel(a_betuk[ci]) < betu_rel(b_betuk[ci])
 
 # Buborékos rendezés a név alapján"
 def rendez_buborek(adatok):
     for i in range(0, len(adatok) - 1):
         for j in range(1, len(adatok)-i):
-            if szo_rel(adatok[j - 1], adatok[j]):
+            if not szo_rel(adatok[j - 1], adatok[j]):
                 cs = adatok[j]
                 adatok[j] = adatok[j - 1]
                 adatok[j - 1] = cs
@@ -64,36 +67,39 @@ def rendez_buborek(adatok):
 # adatok = szavak.copy()
 # random.shuffle(adatok)
 
+
 # adatok beolvasása
+print(f"\nAdatok beolvasása folyamatban")
 adatok = []
 with open("szoveg.txt", "r", encoding="utf-8") as file:
     lines = file.readlines()
 for line in lines:
     line = line.strip()
+    
+    # írásjelek eltárvolítása
     for c in irasjel:
         line = line.replace(c,'')
+    # sorok szavakra bontása: szóköz által határolt szövegtöredékek
     line_datas = line.split(" ")
+    # a nemnulla hosszúságú betűzött szavak letárolása
     for data in line_datas:
+        # kisbetűsítés
+        data = data.lower()
         if len(betuz(data)) > 0:
             adatok.append(data)    
+print(f"\nAdatok beolvasva")
 
+# a szó duplikátumok kiszűrése: halmazzá alakítás 
 adatok = set(adatok)
 adatok = list(adatok)
+"""
+# szó - betű
 for adat in adatok:
   print(f"{adat} = {betuz(adat)}")
-
-"""
-print("\nRendezendő adatok:")
-for adat in adatok:
-  print(adat)
-
-rendez_buborek(adatok)
-
-print("\nRendezett adatok:")
-for adat in adatok:
-  print(adat)
 """
 
+print(f"\nAdatok rendezése folyamatban")
 rendez_buborek(adatok)
+print(f"\nAdatok rendezve")
 with open("szavak.txt","w", encoding="utf-8") as file:
-    file.writelines(adatok)
+    file.writelines('\n'.join(adatok) + '\n')
