@@ -1,10 +1,8 @@
-import random
+import time
 abc = ['0','1','2','3','4','5','6','7','8','9','a','á','b','c','cs','d','dz','dzs','e','é','f','g','gy','h','i','í','j','k','l','ly','m','n','ny','o','ó','ö','ő','p','q','r','s','sz','t','ty','u','ú','ü','ű','v','w','x','y','z','zs']
-noabc = [' ','-','.',',',';',':','?','!']
 irasjel = ['.',',',';',':','?','!']
+noabc = [' ','-'] + irasjel
 hosszuak = {'css': 'cscs', 'dzz': 'dzdz','ggy': 'gygy', 'lly': 'lyly', 'nny':'nyny', 'ssz': 'szsz','tty': 'tyty', 'zzs': 'zszs'}
-szavak = ["alma", "alom", "arany", "arány", "álom", "ármány","cica", "cukor", "csalán", "dinnye", "elefánt", "éled", "faggyú", "gyújt", "gyűjt", "hattyú", "macska", "meggy", "nyár", "nyúz", "nyű", "pácsó", "pöttyös", "ólom", "öccs", "öcsi", "öröm", "üröm", "tátika", "tyúk", "vissza","zuza", "zúzmara", "zsanér", "zsurló"]
-
 
 # betűje sorrendisége
 def betu_rel(betu):
@@ -13,7 +11,7 @@ def betu_rel(betu):
     else:
         return -1
 
-# szórészlet első betűje (max három karakter hosszú)
+# szórészlet első abc-beli betűje
 def elso_betu(szo):
     if len(szo) >= 3 and szo[0:2] in abc:
         return szo[0:2]
@@ -32,7 +30,7 @@ def betuz(szo):
     # amíg nem üres a szó, betűzzük
     while len(szo) > 0:
         betu = elso_betu(szo)
-        # a rendezés szempontjából felesleges betűket kidobjuk
+        # a rendezés szempontjából felesleges betűket kihagyjuk
         if betu not in noabc:
             betuk.append(betu)
         szo = szo[len(betu):]
@@ -49,29 +47,63 @@ def szo_rel(a,b):
         ci = 0
         while ci <szo_hossz  and betu_rel(a_betuk[ci]) == betu_rel(b_betuk[ci]):
             ci += 1
+        # ha az egyik szó eleje megegyezik a másik szóval, akkor a hossz dönt
         if ci == szo_hossz:
             return len(a_betuk) < len(b_betuk)
         else:
             return betu_rel(a_betuk[ci]) < betu_rel(b_betuk[ci])
 
-# Buborékos rendezés a név alapján"
-def rendez_buborek(adatok):
-    for i in range(0, len(adatok) - 1):
-        for j in range(1, len(adatok)-i):
-            if not szo_rel(adatok[j - 1], adatok[j]):
-                cs = adatok[j]
-                adatok[j] = adatok[j - 1]
-                adatok[j - 1] = cs
+# Buborékos rendezés a név alapján
+def rendez_bub(_adatok):
+    for i in range(0, len(_adatok) - 1):
+        for j in range(1, len(_adatok)-i):
+            if not szo_rel(_adatok[j - 1], _adatok[j]):
+                cs = _adatok[j]
+                _adatok[j] = _adatok[j - 1]
+                _adatok[j - 1] = cs
+    return _adatok
 
-# adatok generálása, amelyet rendezni fogunk
-# adatok = szavak.copy()
-# random.shuffle(adatok)
+# Maximumkiválasztásos rendezés a név alapján
+def rendez_max(_adatok):
+    for i in range(len(_adatok)-1,0,-1):
+        maxi = i
+        for j in range(0, i-1):
+            if szo_rel(_adatok[maxi], _adatok[j]):
+                maxi = j
+        print
+        cs = _adatok[maxi]
+        _adatok[maxi] = _adatok[i]
+        _adatok[i] = cs
+    return _adatok
 
+# Shell rendezés név alapján
+def rendez_shell(_adatok):
+    gap = 1
+    n = len(_adatok)
+    while gap*2 <= n:
+        gap *= 2
+    gap = gap - 1
+    while gap > 0:
+        i = 0
+        while i <= gap and i + gap < n:
+            j = i + gap
+            while j < n:
+                elem = _adatok[j]
+                index = j - gap
+                while index > -1 and szo_rel(elem,_adatok[index]):
+                    _adatok[index + gap] = _adatok[index]
+                    index = index - gap
+                _adatok[index + gap] = elem
+                j += gap
+            i += 1
+        gap = gap // 2
+    return _adatok
 
 # adatok beolvasása
-print(f"\nAdatok beolvasása folyamatban")
+filename = "szoveg.txt"
+print(f"\nAdatok beolvasása a(z) '' állományból")
 adatok = []
-with open("szoveg.txt", "r", encoding="utf-8") as file:
+with open(filename, "r", encoding="utf-8") as file:
     lines = file.readlines()
 for line in lines:
     line = line.strip()
@@ -87,19 +119,25 @@ for line in lines:
         data = data.lower()
         if len(betuz(data)) > 0:
             adatok.append(data)    
-print(f"\nAdatok beolvasva")
+print(f"Adatok beolvasva")
 
 # a szó duplikátumok kiszűrése: halmazzá alakítás 
 adatok = set(adatok)
 adatok = list(adatok)
-"""
-# szó - betű
-for adat in adatok:
-  print(f"{adat} = {betuz(adat)}")
-"""
 
 print(f"\nAdatok rendezése folyamatban")
-rendez_buborek(adatok)
-print(f"\nAdatok rendezve")
-with open("szavak.txt","w", encoding="utf-8") as file:
-    file.writelines('\n'.join(adatok) + '\n')
+ido1 = time.time()
+rend = "shell"
+filename = "szavak_" + rend + ".txt"
+if rend == "bub": 
+    rendezett = rendez_bub(adatok)
+elif rend == "max": 
+    rendezett = rendez_max(adatok)
+elif rend == "shell": 
+    rendezett = rendez_shell(adatok)
+ido2 = time.time()
+print(f"{len(adatok)} adat rendezve {rend} módszerrel: {ido2-ido1} másodperc alatt")
+
+with open(filename,"w", encoding="utf-8") as file:
+    file.writelines('\n'.join(rendezett) + '\n')
+print(f"\nAdatok kiírva a '{filename}' állományba.")    

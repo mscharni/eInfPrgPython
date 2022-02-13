@@ -4,7 +4,6 @@ agyvelejében
 akarom
 aki
 akkor
-a
 alakultak
 alá
 albert
@@ -23,6 +22,7 @@ asztalhoz
 asztalra
 az
 azonban
+a
 azt
 aztán
 állt
@@ -325,6 +325,7 @@ rögtönzésekkel
 sarkára
 se
 segíteni
+s
 semmit
 sietnem
 sorfalat
@@ -336,7 +337,6 @@ sört
 sőt
 susogtak
 süketnéma
-s
 számla
 számokat
 számokkal

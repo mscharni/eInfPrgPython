@@ -1,3 +1,4 @@
+# Shell rendezés
 def shell_rendezes(lista):
     gap = 1
     n = len(lista)
@@ -14,7 +15,6 @@ def shell_rendezes(lista):
                 while index > -1 and elem < lista[index]:
                     lista[index + gap] = lista[index]
                     index = index - gap
-                # print(lista)
                 lista[index + gap] = elem
                 j += gap
             i += 1
