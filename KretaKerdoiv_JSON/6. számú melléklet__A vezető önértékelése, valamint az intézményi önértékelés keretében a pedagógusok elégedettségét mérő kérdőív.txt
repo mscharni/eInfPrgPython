@@ -1,0 +1,32 @@
+6. számú melléklet: A vezető önértékelése, valamint az intézményi önértékelés keretében a pedagógusok elégedettségét mérő kérdőív
+Kérjük, gondolja végig és értékelje, hogy a felsorolt állítások közül melyikkel milyen mértékben elégedett. A legördülő menü segítségével válassza a véleményét tükröző értéket 0 és 5 között, ahol:\n5 = Teljesen elégedett vagyok\n4 = Többnyire elégedett vagyok\n3 = Elégedett is vagyok meg nem is\n2 = Többnyire nem vagyok elégedett\n1 = Egyáltalán nem vagyok elégedett\n0 = Nincs információm.\nA „0” megjelölést a kérdőív átlagába nem számítjuk bele!\n
+1. Az intézmény nevelő-oktató-képző munkája a szakmai program alapelveinek megfelelő napi pedagógiai-szakmai gyakorlatot tükrözi.
+2. A pedagógusok a tanulók érdeklődését felkeltő tanítási módszereket alkalmaznak.
+3. A tanulók tantárgyi ellenőrzése rendszeres, tervezett és összehangolt.
+4. A tanulók tantárgyi értékelése egyértelmű követelmények és szempontok szerint történik, amelyet minden pedagógus betart.
+5. A tanulók megfelelő visszajelzést kapnak az értékelések eredményeiről, dolgozataikat a tanárok a szakmai programban meghatározott időn belül kijavítják.
+6. Az intézményben folyó nevelő-oktató-képző munka segíti a tanulókat, hogy felfedezzék és kibontakoztassák egyéni képességeiket.
+7. A felzárkóztatás kiemelt feladat az intézményben, a lemaradó tanulók tervszerűen és rendszeresen kapnak segítséget.
+8. Az intézmény lehetőséget teremt a tehetség kibontakoztatására.
+9. Az intézményben fontos szerepe van a közösségi nevelésnek. A diákcsoportokat együttműködés és előítélet-mentesség jellemzi.
+10. A nevelés és oktatás személyre szóló: a pedagógusok ismerik a tanulókat, testi és szellemi képességeiket, törődnek értelmi, érzelmi fejlődésükkel.
+11. Az intézmény tanórán kívüli tevékenységet szervez a tanulók számára (szakkörök, programok stb.)
+12. Az intézmény hangsúlyt fektet a tanulók környezettudatos nevelésére.
+13. Az intézmény hangsúlyt fektet az egészséges életmódra való nevelésre, a rendszeres mozgásra, sportolásra (sportkörök, versenyek stb.)
+14. Az intézmény hangsúlyt fektet a nemzeti hagyományok megismertetésére, a magyarságtudat, hazaszeretet alakítására.
+15. Az intézményben a tanulók megismerik az erkölcsi normákat, képessé válnak arra, hogy tudatosan vállalt értékrend szerint alakítsák életüket.
+16. Az intézményben a diákoknak lehetőségük van arra, hogy bekapcsolódjanak az őket érintő döntések előkészítésébe, véleményt nyilvánítsanak, és változásokat kezdeményezzenek.
+17. Az intézményben a szülőknek lehetőségük van arra, hogy bekapcsolódjanak a gyermekeiket érintő döntések előkészítésébe, véleményt nyilvánítsanak, változásokat kezdeményezzenek.
+18. Az intézményvezető jelenléte meghatározó az intézményben.
+19. A vezető egyértelműen fogalmazza meg elvárásait, és egyértelműen határozza meg a nevelőtestület feladatait, miközben törekszik az egyenletes terhelés megvalósítására.
+20. Az intézményvezető fontosnak tartja a pedagógusok szakmai fejlődését: ezt segíti feladatmegbízásokkal, a célzott belső és külső továbbképzésekkel.
+21. Az intézményvezető hangsúlyt fektet a nevelőtestületen belül az etikus pedagógus-magatartás betartatására.
+22. Az intézményvezetés ellenőrző-értékelő tevékenysége folyamatos.
+23. Az intézményvezetés az intézményi önértékelési rendszer alkalmazásával visszajelzést ad a pedagógusoknak munkájukkal kapcsolatban: a visszajelzés és az értékelés korrekt, és tényeken alapul.
+24. Az intézményen belüli információáramlás kétirányú, a nevelőtestület tagjai időben megkapják a munkájukhoz szükséges információkat.
+25. A vezető fontosnak tartja, elősegíti és igénybe veszi a pedagógusok szakmai együttműködését.
+26. A vezető igényli a véleményeket, támogatja a jó ötleteket.
+27. Az intézményben a pedagógiai-szakmai munka zavartalan végzéséhez szükséges eszközök rendelkezésre állnak.
+28. Az intézményben tervszerűen és hatékonyan működnek a szakmai munkaközösségek.
+29. Az intézményben a pedagógusok készek a szakmai fejlődésre, tanfolyamokon, továbbképzéseken vesznek részt, az itt szerzett ismereteket hasznosítják, és egymásnak is átadják.
+30. Az intézményben a tanulók szüleivel való kapcsolattartás formái megfelelőek, hatékonyan biztosítják a szülők számára, hogy hozzájussanak az intézménnyel és gyermekükkel kapcsolatos információkhoz. 
